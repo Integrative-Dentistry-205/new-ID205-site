@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-US" class="values-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Our Values | Integrative Dentistry Seattle</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f1833d9ed3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" disabled id="dyslexia-font">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Integrative Dentistry",
+    "alternateName": "Integrative Dentistry Seattle",
+    "description": "The best in modern holistic dentistry. Offering biocompatible fillings, ozone therapy, and biological dental care in Seattle, Washington.",
+    "url": "https://www.mitchmarderdds.com",
+    "logo": "https://www.mitchmarderdds.com/assets/Logo.png",
+    "image": "https://www.mitchmarderdds.com/assets/Logo.png",
+    "telephone": "+1-206-367-6453",
+    "email": "info@integrativedentistry.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9730 3rd Avenue NE, Suite 205",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "postalCode": "98115",
+        "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+        {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+        ],
+        "opens": "07:00",
+        "closes": "16:00"
+        }
+    ],
+    "sameAs": [
+        "https://www.facebook.com/IntegrativeDentistrySeattle/",
+        "https://www.yelp.com/biz/integrative-dentistry-seattle"
+    ]
+    }
+    </script>
+    <script>
+        // Check local storage immediately before the page renders
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-theme');
+        }
+        if (localStorage.getItem('adhd-mode') === 'enabled') {
+            document.documentElement.classList.add('adhd-mode');
+        }    
+        if (localStorage.getItem('large-cursor') === 'enabled') {
+            document.documentElement.classList.add('large-cursor');
+        }
+        if (localStorage.getItem('dyslexia-font') === 'enabled') {
+            document.body.classList.add('dyslexia-enabled');
+            document.getElementById('dyslexia-font').removeAttribute('disabled');
+        }
+        if (localStorage.getItem('high-contrast') === 'enabled') {
+            document.documentElement.classList.add('high-contrast');
+        }
+    </script>    
+</head>
+<body>
+
+    <div class="canvas-bg"></div>
+
+    <!-- Mobile Contact Hub -->
+<div class="floating-actions-container">
+    <div class="mobile-contact-hub">
+        <button class="contact-hub-trigger" aria-label="Open contact option panel" aria-expanded="false">
+            <i class="fa-solid fa-comments hub-icon-open"></i>
+            <i class="fa-solid fa-xmark hub-icon-close"></i>
+        </button>
+    <div class="contact-hub-menu">
+        <div class="hub-menu-title">Connect With Us</div>
+            <a href="tel:2063676453" class="hub-menu-item">
+                <div class="hub-item-icon color-call"><i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Call Our Office</span>
+                    <small>(206) 367-6453</small>
+                </div>
+            </a>
+            <a href="sms:2063676453?&body=Hello! My name is " class="hub-menu-item">
+                <div class="hub-item-icon color-text"><i class="fa-solid fa-comment-sms fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Text Us Directly</span>
+                    <small>Real-time coordinator link</small>
+                </div>
+            </a>
+            <a href="http://dental4.me/integrativedentistry" class="hub-menu-item">
+                <div class="hub-item-icon color-schedule"><i class="fa-duotone fa-solid fa-calendar-days fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Book Appointment</span>
+                    <small>Schedule your holistic visit</small>
+                </div>
+            </a>
+            <a href="#" onclick="downloadVCard(event)" class="hub-menu-item">
+                <div class="hub-item-icon color-contact"><i class="fa-solid fa-user-plus fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Save to Contacts</span>
+                    <small>Add our office to your phone</small>
+                </div>
+            </a>
+    </div>
+</div>
+        
+        
+<!-- Call Us Button -->
+<a href="tel:2063676453" class="action-bubble bubble-teal pos-call" data-tooltip="Call Us!" aria-label="Call Us">
+    <span class="bubble-icon">
+        <i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Text Us Button -->
+<a href="sms:2063676453?&body=Hello! My name is " class="action-bubble bubble-teal pos-text" data-tooltip="Text Us!" aria-label="Text Us">
+    <span class="bubble-icon">
+        <i class="fa-solid fa-comment-dots fa-flip fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Schedule Now Button -->
+<a href="http://dental4.me/integrativedentistry" class="action-bubble bubble-teal pos-schedule" data-tooltip="Schedule Now!" aria-label="Schedule Now">
+    <span class="bubble-icon">
+        <i class="fa-duotone fa-solid fa-calendar-days fa-float fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Flow IV Partner Button with Timed Speech Bubble -->
+<div class="flow-iv-wrapper pos-flow-iv">
+    <div id="flow-iv-speech" class="flow-iv-speech-bubble" role="status">
+        Now Partnered With <em>flow iv</em>!
+        <span class="speech-arrow"></span>
+    </div>
+    <a href="https://flowiv.org" target="_blank" rel="noopener noreferrer" class="action-bubble bubble-flow-iv" data-tooltip="Visit flow iv!" aria-label="Now Paired With flow iv">
+        <span class="bubble-icon flow-iv-icon-wrap">
+            <i class="fa-vellum fa-solid fa-droplet fa-2xl" style="--fa-primary-color: rgb(111, 157, 238); --fa-secondary-color: rgb(202, 216, 241); --fa-secondary-opacity: 1;"></i>
+        </span>
+    </a>
+</div>
+
+<!-- 3D Theme Switcher w/ Coin-flip Engine -->
+<button id="theme-btn" class="action-bubble theme-bubble-position pos-theme" data-tooltip="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
+    <div class="theme-coin">
+        <div class="coin-face face-front">
+                    <i class="fa-graphite fa-thin fa-moon fa-2xl"></i>
+        </div>
+        <div class="coin-face face-back">
+            <i class="fa-sharp fa-regular fa-sun-bright fa-2xl"></i>
+        </div>
+    </div>
+</button>
+
+<!-- Accessibility Button -->
+<button id="access-btn" class="action-bubble bubble-brown pos-accessibility" data-tooltip="Accessibility Options!" aria-label="Accessibility Options">
+    <span class="bubble-icon">
+        <i class="fa-notdog-duo fa-solid fa-universal-access fa-2xl"></i>
+    </span>
+</button>
+</div>
+
+<!-- Dropdown Panel Hooked to the Accessibility Module -->
+<div id="access-menu" class="hidden">
+    <h3>Accessibility Accommodations</h3>
+    <hr>
+        <button id="btn-adhd-mode" onclick="toggleAccessibility('adhd-mode')">ADHD Reading Mask</button>
+        <button id="btn-large-cursor" onclick="toggleAccessibility('large-cursor')">Large Cursor</button>
+        <button id="btn-dyslexia-font" onclick="toggleAccessibility('dyslexia-font')">Dyslexia Friendly Font</button>
+        <button id="btn-high-contrast" onclick="toggleAccessibility('high-contrast')">High Contrast Mode</button>
+</div>
+    
+    <header>
+    <div class="header-bg-canvas"></div>
+        <nav>
+        <div class="brand-container">
+            <div class="logo">
+            <a href="https://mitchmarderdds.com/" style="color: inherit; text-decoration: none;">
+                Integrative 
+                <img src="assets/Logo.png" alt="Integrative Dentistry Emblem" class="header-logo-img">
+                <span>Dentistry</span>
+            </a>
+            </div>
+                <p class="tagline">The Best in Modern Holistic Dentistry</p>
+        </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li class="dropdown"><a href="#" class="nav-item">Meet Our Team</a><div class="dropdown-content"><a href="doctors.html">Meet The Doctors</a><a href="hygienists.html">Meet The Hygienists</a></div></li>
+                
+                <li><a href="about.html" class="nav-item">About Our Office</a></li>
+                <li><a href="services.html" class="nav-item">Our Services</a></li>
+                <li><a href="faq.html" class="nav-item">FAQ</a></li>
+                <li><a href="forms.html" class="nav-item">Patient Forms</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-line line-top"></span>
+                    <span class="hamburger-line line-middle"></span>
+                    <span class="hamburger-line line-bottom"></span>
+                </span>
+            </button>
+        </nav>
+</header>
+
+    <main>
+        <div class="values-scroll-wrapper" id="values-scroll-track">
+            <div class="values-sticky-container">
+                
+                <div class="values-page-header">
+                    <h2>Our Values</h2>
+                </div>
+
+                <div id="values-presentation-zone"></div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact" class="scroll-animate">
+        <div class="footer-grid">
+            <div class="contact-details">
+                <h2>Connect With Us</h2>
+                <p class="address-line">9730 3rd Avenue NE, Suite 205<br>Seattle, WA, 98115</p>
+                <div class="meta-links">
+                    <p><strong>Call or Text:</strong> <a href="tel:2063676453" data-tooltip="Opens your native calling app to call our office directly">206-367-6453</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@integrativedentistry.com" data-tooltip="Opens your native email app to send us a message">info@integrativedentistry.com</a></p>
+                </div>
+                <div class="hours-block">
+                    <h3>Office Hours</h3>
+                    <p>Monday – Thursday: 7:00 AM – 4:00 PM</p>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div class="fallback-map-ui">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.1939993959363!2d-122.32501500000001!3d47.700071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013ff6bbf59c9%3A0x12124b2e3f065d6d!2sIntegrative%20Dentistry!5e0!3m2!1sen!2sus!4v1781202363336!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/IntegrativeDentistrySeattle/" class="social-circle-btn facebook" target="_blank" rel="noopener" data-tooltip="Follow our Facebook community">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                </a>
+                <a href="#" class="social-circle-btn instagram" target="_blank" rel="noopener" data-tooltip="See updates on Instagram">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                </a>
+                <a href="#" class="social-circle-btn tiktok" target="_blank" rel="noopener" data-tooltip="Watch us on TikTok">
+                    <i class="fa-brands fa-tiktok fa-2xl"></i>
+                </a>
+                <a href="https://share.google/nsMCfHDNv0bOtifRO" class="social-circle-btn google" target="_blank" rel="noopener" data-tooltip="View our Google Business listing">
+                    <i class="fa-brands fa-google fa-2xl"></i>
+                </a>
+                <a href="https://www.yelp.com/biz/integrative-dentistry-seattle" class="social-circle-btn yelp" target="_blank" rel="noopener" data-tooltip="Read our reviews on Yelp">
+                    <i class="fa-brands fa-yelp fa-2xl"></i>
+                </a>
+            </div>
+        </div>
+</footer>
+
+    <div id="cursor-tooltip" class="cursor-tooltip"></div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

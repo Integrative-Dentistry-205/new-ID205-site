@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Meet Our Doctors | Integrative Dentistry Seattle</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f1833d9ed3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" disabled id="dyslexia-font">
+    
+    <script>
+        // Inline localStorage state enforcement engine to prevent flash of unstyled content
+        if (localStorage.getItem('dark-mode') === 'enabled') { document.body.classList.add('dark-theme'); }
+        if (localStorage.getItem('adhd-mode') === 'enabled') { document.documentElement.classList.add('adhd-mode'); }    
+        if (localStorage.getItem('large-cursor') === 'enabled') { document.documentElement.classList.add('large-cursor'); }
+        if (localStorage.getItem('dyslexia-font') === 'enabled') {
+            document.body.classList.add('dyslexia-enabled');
+            document.getElementById('dyslexia-font').removeAttribute('disabled');
+        }
+        if (localStorage.getItem('high-contrast') === 'enabled') { document.documentElement.classList.add('high-contrast'); }
+    </script>    
+</head>
+<body>
+
+    <div class="canvas-bg"></div>
+
+    <!-- Mobile Contact Hub -->
+<div class="floating-actions-container">
+    <div class="mobile-contact-hub">
+        <button class="contact-hub-trigger" aria-label="Open contact option panel" aria-expanded="false">
+            <i class="fa-solid fa-comments hub-icon-open"></i>
+            <i class="fa-solid fa-xmark hub-icon-close"></i>
+        </button>
+    <div class="contact-hub-menu">
+        <div class="hub-menu-title">Connect With Us</div>
+            <a href="tel:2063676453" class="hub-menu-item">
+                <div class="hub-item-icon color-call"><i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Call Our Office</span>
+                    <small>(206) 367-6453</small>
+                </div>
+            </a>
+            <a href="sms:2063676453?&body=Hello! My name is " class="hub-menu-item">
+                <div class="hub-item-icon color-text"><i class="fa-solid fa-comment-sms fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Text Us Directly</span>
+                    <small>Real-time coordinator link</small>
+                </div>
+            </a>
+            <a href="http://dental4.me/integrativedentistry" class="hub-menu-item">
+                <div class="hub-item-icon color-schedule"><i class="fa-duotone fa-solid fa-calendar-days fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Book Appointment</span>
+                    <small>Schedule your holistic visit</small>
+                </div>
+            </a>
+            <a href="#" onclick="downloadVCard(event)" class="hub-menu-item">
+                <div class="hub-item-icon color-contact"><i class="fa-solid fa-user-plus fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Save to Contacts</span>
+                    <small>Add our office to your phone</small>
+                </div>
+            </a>
+    </div>
+</div>
+        
+        
+<!-- Call Us Button -->
+<a href="tel:2063676453" class="action-bubble bubble-teal pos-call" data-tooltip="Call Us!" aria-label="Call Us">
+    <span class="bubble-icon">
+        <i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Text Us Button -->
+<a href="sms:2063676453?&body=Hello! My name is " class="action-bubble bubble-teal pos-text" data-tooltip="Text Us!" aria-label="Text Us">
+    <span class="bubble-icon">
+        <i class="fa-solid fa-comment-dots fa-flip fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Schedule Now Button -->
+<a href="http://dental4.me/integrativedentistry" class="action-bubble bubble-teal pos-schedule" data-tooltip="Schedule Now!" aria-label="Schedule Now">
+    <span class="bubble-icon">
+        <i class="fa-duotone fa-solid fa-calendar-days fa-float fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Flow IV Partner Button with Timed Speech Bubble -->
+<div class="flow-iv-wrapper pos-flow-iv">
+    <div id="flow-iv-speech" class="flow-iv-speech-bubble" role="status">
+        Now Partnered With <em>flow iv</em>!
+        <span class="speech-arrow"></span>
+    </div>
+    <a href="https://flowiv.org" target="_blank" rel="noopener noreferrer" class="action-bubble bubble-flow-iv" data-tooltip="Visit flow iv!" aria-label="Now Paired With flow iv">
+        <span class="bubble-icon flow-iv-icon-wrap">
+            <i class="fa-vellum fa-solid fa-droplet fa-2xl" style="--fa-primary-color: rgb(111, 157, 238); --fa-secondary-color: rgb(202, 216, 241); --fa-secondary-opacity: 1;"></i>
+        </span>
+    </a>
+</div>
+
+<!-- 3D Theme Switcher w/ Coin-flip Engine -->
+<button id="theme-btn" class="action-bubble theme-bubble-position pos-theme" data-tooltip="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
+    <div class="theme-coin">
+        <div class="coin-face face-front">
+                    <i class="fa-graphite fa-thin fa-moon fa-2xl"></i>
+        </div>
+        <div class="coin-face face-back">
+            <i class="fa-sharp fa-regular fa-sun-bright fa-2xl"></i>
+        </div>
+    </div>
+</button>
+
+<!-- Accessibility Button -->
+<button id="access-btn" class="action-bubble bubble-brown pos-accessibility" data-tooltip="Accessibility Options!" aria-label="Accessibility Options">
+    <span class="bubble-icon">
+        <i class="fa-notdog-duo fa-solid fa-universal-access fa-2xl"></i>
+    </span>
+</button>
+</div>
+
+<!-- Dropdown Panel Hooked to the Accessibility Module -->
+<div id="access-menu" class="hidden">
+    <h3>Accessibility Accommodations</h3>
+    <hr>
+        <button id="btn-adhd-mode" onclick="toggleAccessibility('adhd-mode')">ADHD Reading Mask</button>
+        <button id="btn-large-cursor" onclick="toggleAccessibility('large-cursor')">Large Cursor</button>
+        <button id="btn-dyslexia-font" onclick="toggleAccessibility('dyslexia-font')">Dyslexia Friendly Font</button>
+        <button id="btn-high-contrast" onclick="toggleAccessibility('high-contrast')">High Contrast Mode</button>
+</div>
+    
+    <header>
+    <div class="header-bg-canvas"></div>
+        <nav>
+        <div class="brand-container">
+            <div class="logo">
+            <a href="https://mitchmarderdds.com/" style="color: inherit; text-decoration: none;">
+                Integrative 
+                <img src="assets/Logo.png" alt="Integrative Dentistry Emblem" class="header-logo-img">
+                <span>Dentistry</span>
+            </a>
+            </div>
+                <p class="tagline">The Best in Modern Holistic Dentistry</p>
+        </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="hygienists.html" class="nav-item">Meet The Hygienists</a></li>
+                <li><a href="values.html" class="nav-item">Our Values</a></li>
+                <li><a href="about.html" class="nav-item">About Our Office</a></li>
+                <li><a href="services.html" class="nav-item">Our Services</a></li>
+                <li><a href="faq.html" class="nav-item">FAQ</a></li>
+                <li><a href="forms.html" class="nav-item">Patient Forms</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-line line-top"></span>
+                    <span class="hamburger-line line-middle"></span>
+                    <span class="hamburger-line line-bottom"></span>
+                </span>
+            </button>
+        </nav>
+</header>
+
+    <main>
+        <section class="team-section scroll-animate visible">
+            <div class="team-header">
+                <h2>Meet Our Holistic Doctors</h2>
+                <span class="services-subtitle">Biological Experts Dedicated to True Wellness</span>
+                <p class="services-intro">Click on a provider to learn about their training, holistic philosophies, and clinical passions.</p>
+            </div>
+
+            <!-- Provider Selection Avatars Matrix -->
+            <div class="team-selection-grid">
+                <div class="provider-avatar-card active" data-team-target="dr-birrer">
+                    <div class="avatar-image-frame">
+                        <img src="assets/BirrerCircle.png" alt="Dr. Birrer Profile Portrait">
+                    </div>
+                    <h3>Dr. Bramely Birrer, DDS</h3>
+                    <span>Biological Dentist</span>
+                </div>
+
+                <div class="provider-avatar-card" data-team-target="dr-cao">
+                    <div class="avatar-image-frame">
+                        <img src="assets/CaoCircle.png" alt="Dr. Cao Profile Portrait">
+                    </div>
+                    <h3>Dr. Christine Cao, DMD</h3>
+                    <span>Holistic Clinician</span>
+                </div>
+
+                <div class="provider-avatar-card" data-team-target="dr-do">
+                    <div class="avatar-image-frame">
+                        <img src="assets/DoCircle.png" alt="Dr. Do Profile Portrait">
+                    </div>
+                    <h3>Dr. David Do, DDS</h3><br>
+                    <span>Implant Specialist</span>
+                </div>
+
+                <div class="provider-avatar-card" data-team-target="dr-daneals">
+                    <div class="avatar-image-frame">
+                        <img src="assets/DanealsCircle.png" alt="Dr. Daneals Profile Portrait">
+                    </div>
+                    <h3>Dr. Jeannette Daneals, ND, LMT</h3>
+                    <span>IV Sepcialist</span>
+                </div>
+
+                <div class="provider-avatar-card" data-team-target="dr-rubin">
+                    <div class="avatar-image-frame">
+                        <img src="assets/RubinCircle.png" alt="Dr. Rubin Profile Portrait">
+                    </div>
+                    <h3>Dr. Paul Rubin, DDS</h3>
+                    <span>Pioneer of Holistic Dentistry</span>
+                </div>
+            </div>
+
+            <!-- Focused Biological Bio Presentation Deck -->
+            <div class="team-display-canvas">
+                
+                <!-- Profile Block: Dr. Birrer -->
+                <div class="team-display-card active" id="team-dr-birrer">
+                    <div class="bio-layout-split">
+                        <div class="bio-text-zone">
+                            <div class="card-badge">Holistic Dentist</div>
+                            <h3>Dr. Bramley Birrer, DDS</h3>
+                            <p class="card-description"><br>Dr. Birrer was born and raised in Southern California. He took after his father, a jack-of-all-trades, fixing things around the house and working on cars and other crafts. In doing so, he discovered the joys of hard work with his hands, which initially led him to dentistry. When not restoring smiles, Dr. Birrer enjoys watching independent films and exploring local cuisine.<br><br>
+                            Dr. Birrer is SMART (Safe Mercury Amalgam Removal Technique) Certified with IAOMT (International Academy of Oral Medicine & Toxicology). He also specializes in same-day all-ceramic fillings and crowns using CEREC CAD/CAM technology. These restorations are strong, long-lasting, natural-looking without metal, without BPA, without temporaries that break or fall off, and without a 2nd appointment. You will leave my office that day with teeth that are ready to use!<br></p>
+                            <div class="birrer-quote"><p>As my patient, you are not just another set of teeth; you are another conversation, another story, another friendship. By knowing who you are, I can know what your teeth mean to you, and this is where dentistry begins.</div> -Dr. Birrer
+                            </p>
+                            <br>
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-graduation-cap"></i> University of California, Los Angeles (UCLA), School of Dentistry Alumn</li>
+                                <li><i class="fa-solid fa-flip-horizontal fa-shield-halved"></i> Specializes in Root Canal Alternative Strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Block: Dr. Cao -->
+                <div class="team-display-card" id="team-dr-cao">
+                    <div class="bio-layout-split">
+                        <div class="bio-text-zone">
+                            <div class="card-badge">Biological Restoration</div>
+                            <h3>Dr. Christine Cao, DMD</h3>
+                            <p class="card-description"><br>Although born and raised in Southern California, Dr. Cao earned her doctorate degree from Tufts University School of Dental Medicine in Boston, MA. She returned to Southern California where she completed Invisalign certification and a General Practice Residency at Harbor-UCLA Medical Center where her training included implant restorations and cosmetics. She holds memberships to various dental associations and study clubs. She also enjoys volunteering her time at free clinic days and mission trips to other countries. Dr. Cao believes that every patient should be treated to her fullest potential taking into consideration all their desires, capabilities, and sensitivities to devise the most appropriate and individualized treatment plan.</p>
+                            <br>
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-graduation-cap"></i> Tufts University School of Dental Medicine Alumn</li>
+                                <li><i class="fa-solid fa-person-dress"></i> Expert in Women's Health in Dentistry</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Block: Dr. Do -->
+                <div class="team-display-card" id="team-dr-do">
+                    <div class="bio-layout-split">
+                        <div class="bio-text-zone">
+                            <div class="card-badge">Holistic Oral Surgery</div>
+                            <h3>Dr. David Do, DDS</h3>
+                            <p class="card-description"><br>Dr. Do is originally from Northern California where he graduated in 2012 from the University of the Pacific, fulfilling his lifelong dream of becoming a dentist. He went on to complete implant training at the Pacific Institute in Vancouver, BC., and is versed in Botox through the American Academy of Facial Aesthetics. He and a Bernedoodle named ‘Remy’ happily call Seattle home, enjoying outdoor activities like hiking, skiing, and beaching, and appreciating the simple pleasure of staying in and watching the rain fall.<br><br>
+                            Through ceaseless study of today’s latest methods and technology, Dr. Do is able to provide the absolute best dentistry has to offer. By collaborating with like-minded professionals and specialists, he utilizes a unique multidisciplinary approach to oral healthcare.<br><br>
+                            Described by colleagues as humble and calm, and “the kindest doctor,” Dr. Do is known for his spirit of compassion, always honoring his patient’s needs and putting their wishes first.<br><br>
+                            Dr. Do is excited about practicing whole-body dentistry because he believes the right kind of care has the power to enhance both the physical and emotional aspects of health and well-being.</p>
+                            <br>
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-graduation-cap"></i> University of the Pacific, and Pacific Institute Alumn</li>
+                                <li><i class="fa-solid fa-teeth"></i> Implantologist and Facial Aesthetics Provider</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Block: Dr. Daneals -->
+                <div class="team-display-card" id="team-dr-daneals">
+                    <div class="bio-layout-split">
+                        <div class="bio-text-zone">
+                            <div class="card-badge">Naturopathic Care, Licensed Massage Therapy, and IV Therapy</div>
+                            <h3>Dr. Jeannette Daneals, ND, LMT</h3>
+                            <p class="card-description"><br>Dr. Jeannette Daneals, graduated from National College of Natural Medicine (NCNM)in 2016. She then completed a two-year residency at Cameron Wellness Center in Salt Lake City, Utah where she became proficient at intravenous therapy, and managing bioidentical hormones, earning an advanced BHRT certification through worldlink medical.<br><br>
+                                Dr. Daneals also launched a SIBO testing center directly on site for the clinic, where she began working with patients contending with gastrointestinal imbalances, which later brought her to learning the fine art of administering colon hydrotherapy via the closed colonic system.<br><br>
+                                Her strong affinity for physical medicine is exemplified further as a deep tissue massage therapist and fitness trainer. She is also highly skillful at administering complex intravenous therapies such as Extracorporeal Blood Oxygenation-Ozonation (EBOO) and Photodynamic Therapy using Weberneedle Endolaser technology. She has earned the nickname, the “Vein Whisperer”. Dr. Daneals believes that competence proceeds confidence and confident she is, in her IV administration skills.<br><br>
+                                With a newfound passion for understanding quantum physics as it relates to light, water and magnetism on mitochondrial health, Dr. Daneals manages wellness using the laws of nature as her guide. Her dharma as teacher and coach are actualized through reminding others of the intelligence of the human body and its ability to heal itself. She believes that health is achieved when living within the laws of nature and living a life of purpose.<br><br>
+                                Dr. Daneals finds soulful fulfillment hosting her mindfulmedicina podcast, studying hand analysis, bodybuilding and dancing salsa, bachata and kizomba. Otherwise, you'll find her binging on near-death experience podcasts, sunbathing and cold plunging. Her loyalty and sense of service extends to family and friends, which includes a sacred contract to her toddler soulmate and feline daughter.</p>
+                            <br>
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-graduation-cap"></i> National College of Natural Medicine (NCNM) Alumn</li>
+                                <li><i class="fa-solid fa-syringe"></i> IV Therapy, Antibiotic Alternatives, EBOO, and UVBI Treatments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Block: Dr. Rubin -->
+                <div class="team-display-card" id="team-dr-rubin">
+                    <div class="bio-layout-split">
+                        <div class="bio-text-zone">
+                            <div class="card-badge">Leading Voice of Holistic Dentistry</div>
+                            <h3>Dr. Paul Rubin, DDS</h3>
+                            <p class="card-description"><br>Dr. Rubin is one of this area’s pioneers in mercury safe dentistry, abandoning the use of mercury amalgam (“silver”) dental fillings in 1980. One of the early members of the International Academy of Oral Medicine and Toxicology (IAOMT), he has served in various offices and on its Board of Directors for several years, helping to see it grow into one of the world’s leading authoritative bodies in the area of mercury and other toxins in dentistry. Dr. Rubin was honored as a Fellow of the IAOMT in 1992, and a Master of the IAOMT in 2007. Dr. Rubin is also a charter member of the International Association of Mercury Free Dentists. In 2009, Dr. Rubin co-founded New Directions Dentistry, a company dedicated to teaching dentists nationwide how to practice mercury safe dentistry.<br><br>
+                            With a special interest in the environmental effects of dental amalgam mercury, Dr. Rubin has lectured across the country and published research on this subject. His was the first office in Washington State (and one of the first in the country) to install a mercury capturing system to prevent waste amalgam-mercury from leaving the dental office waste stream, over a fifteen ago. As of July of 2003, all King County dental offices are now required to have such equipment. In 1997, Dr. Rubin was honored as Runner-Up for the Governor’s Award for Pollution Prevention, and won the Puget Sound Waste Information Network’s Award for Environmental Achievement. He was the first, and one of the few dental offices to receive Envirostars’ highest 5-star rating. Dr. Rubin has appeared and testified before informational hearings by King County Board of Health and the Washington State Senate Committee on Health and Long Term Care.<br></p>
+                            <div class="rubin-addendum"><p>After 46 years of service and advocacy in biological dentistry, Dr. Rubin hangs up his handpiece and loupes to focus on dental education, magic, lucid dreaming, and being a grandfather. We’re proud to announce Dr. Rubin’s retirement and will closely follow his ongoing efforts in educating the next generation of naturopathic doctors!</p>
+                            </div><br>
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-graduation-cap"></i> IAOMT Fellow since 1992, Master of the IAOMT since 2007</li>
+                                <li><i class="fa-solid fa-hand-fist"></i> Pioneer in Mercury Safe and Free Dentistry</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="scroll-animate">
+        <div class="footer-grid">
+            <div class="contact-details">
+                <h2>Connect With Us</h2>
+                <p class="address-line">9730 3rd Avenue NE, Suite 205<br>Seattle, WA, 98115</p>
+                <div class="meta-links">
+                    <p><strong>Call or Text:</strong> <a href="tel:2063676453" data-tooltip="Opens your native calling app to call our office directly">206-367-6453</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@integrativedentistry.com" data-tooltip="Opens your native email app to send us a message">info@integrativedentistry.com</a></p>
+                </div>
+                <div class="hours-block">
+                    <h3>Office Hours</h3>
+                    <p>Monday – Thursday: 7:00 AM – 4:00 PM</p>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div class="fallback-map-ui">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.1939993959363!2d-122.32501500000001!3d47.700071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013ff6bbf59c9%3A0x12124b2e3f065d6d!2sIntegrative%20Dentistry!5e0!3m2!1sen!2sus!4v1781202363336!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/IntegrativeDentistrySeattle/" class="social-circle-btn facebook" target="_blank" rel="noopener" data-tooltip="Follow our Facebook community">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                </a>
+                <a href="#" class="social-circle-btn instagram" target="_blank" rel="noopener" data-tooltip="See updates on Instagram">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                </a>
+                <a href="#" class="social-circle-btn tiktok" target="_blank" rel="noopener" data-tooltip="Watch us on TikTok">
+                    <i class="fa-brands fa-tiktok fa-2xl"></i>
+                </a>
+                <a href="https://share.google/nsMCfHDNv0bOtifRO" class="social-circle-btn google" target="_blank" rel="noopener" data-tooltip="View our Google Business listing">
+                    <i class="fa-brands fa-google fa-2xl"></i>
+                </a>
+                <a href="https://www.yelp.com/biz/integrative-dentistry-seattle" class="social-circle-btn yelp" target="_blank" rel="noopener" data-tooltip="Read our reviews on Yelp">
+                    <i class="fa-brands fa-yelp fa-2xl"></i>
+                </a>
+            </div>
+        </div>
+</footer>
+
+    <div id="cursor-tooltip" class="cursor-tooltip"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

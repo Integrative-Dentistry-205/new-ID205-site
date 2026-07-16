@@ -1,0 +1,248 @@
+[
+    {
+       "title": "T R U S T",
+       "icon": "fa-duotone fa-solid fa-handshake fa-bounce",
+       "definitions": [
+           "Speak the truth.", 
+           "Be transparent.", 
+           "Keep my word."
+       ],
+       "quote": "Radical honesty: give it, take it, get past it."
+   },
+    {
+       "title": "A U T H E N T I C I T Y",
+       "icon": "fa-fingerprint fa-fade",
+       "definitions": [
+           "Accept myself.", 
+           "Reveal myself.", 
+           "Be myself."
+       ],
+       "quote": "Harmony of thought and word and deed."
+   },
+    {
+       "title": "C O U R A G E",
+       "icon": "fa-mountain fa-float",
+       "definitions": [
+           "Conquer my fears.", 
+           "Trust my instincts.", 
+           "Have fierce conversations."
+       ],
+       "quote": "Don’t run away from challenges. Run over them."
+   },
+    {
+       "title": "R E S I L I E N C E",
+       "icon": "fa-shield-halved fa-beat",
+       "definitions": [
+           "Keep going.", 
+           "Fail forward.", 
+           "The word can’t is a lie.", 
+           "Little strokes fell great oaks."
+       ],
+       "quote": "The biggest problem is thinking I shouldn’t have problems."
+   },
+    {
+       "title": "E X C E L L E N C E",
+       "icon": "fa-award fa-flip-360",
+       "definitions": [
+           "Good is the enemy of great.", 
+           "Practice into perfection.", 
+           "Better has no finish line."
+       ],
+       "quote": "The only sin is mediocrity."
+   },
+    {
+       "title": "G R O W T H",
+       "icon": "fa-seedling fa-jello",
+       "definitions": [
+           "Defy my limits.", 
+           "Have hard days.", 
+           "Walk with giants."
+       ],
+       "quote": "When I let go of what I am, I become what I might be."
+   },
+    {
+       "title": "E D U C A T I O N",
+       "icon": "fa-book-open fa-jello",
+       "definitions": [
+           "Seek the truth.", 
+           "Read the research.", 
+           "Diminish ignorance."
+       ],
+       "quote": "When I know better, I do better."
+   },
+    {
+       "title": "P R E P A R A T I O N",
+       "icon": "fa-clipboard-check fa-wag",
+       "definitions": [
+           "Measure twice.", 
+           "Expect curveballs.", 
+           "Overcome the obstacle before the obstacle."
+       ],
+       "quote": "Tomorrow belongs to those who prepare today."
+   },
+    {
+       "title": "I N N O V A T I O N",
+       "icon": "fa-lightbulb fa-buzz",
+       "definitions": [
+           "Be an original.", 
+           "Cut a new path.", 
+           "Change the game."
+       ],
+       "quote": "The world is changed by people crazy enough to think they can."
+   },
+    {
+       "title": "O W N E R S H I P",
+       "icon": "fa-key fa-flip",
+       "definitions": [
+           "Be the thermostat.", 
+           "I get what I deserve.", 
+           "Put down the shovel.", 
+           "The grass is green where I water it."
+       ],
+       "quote": "(Don’t water the weeds.)"
+   },
+    {
+       "title": "L E A D E R S H I P",
+       "icon": "fa-compass fa-spin",
+       "definitions": [
+           "Be someone worth following.", 
+           "I get what I tolerate.", 
+           "Start with Why."
+       ],
+       "quote": "My people are winning, growing, and being heard."
+   },
+    {
+       "title": "T H R I F T",
+       "icon": "fa-scale-balanced fa-wag",
+       "definitions": [
+           "Do more with less.", 
+           "Do it right the first time.", 
+           "Don't step over dollars for pennies."
+       ],
+       "quote": "Work expands to fill the resources allotted for its completion."
+   },
+    {
+       "title": "S I M P L I C I T Y",
+       "icon": "fa-feather fa-float",
+       "definitions": [
+           "Keep it simple.", 
+           "Make it effortless.", 
+           "Progress by subtraction."
+       ],
+       "quote": "Get what I want by getting rid of what I don't."
+   },
+    {
+       "title": "G R A T I T U D E",
+       "icon": "fa-hand-holding-heart fa-beat",
+       "definitions": [
+           "See the silver linings.", 
+           "Count my blessings.", 
+           "Appreciate aloud.", 
+           "Enough is a feast."
+       ],
+       "quote": "I may spoil what I have by desiring what I have not."
+   },
+    {
+       "title": "G U S T O",
+       "icon": "fa-fire-flame-curved fa-beat-fade",
+       "definitions": [
+           "Anchors up.", 
+           "Be the sunshine.", 
+           "Collect moments."
+       ],
+       "quote": "I only live once. Done right, once is enough."
+   },
+    {
+       "title": "L E V I T Y",
+       "icon": "fa-grin-beam fa-bounce",
+       "definitions": [
+           "Have fun.", 
+           "Never grow up.", 
+           "Laugh out loud."
+       ],
+       "quote": "I am most comical when I take myself too seriously."
+   },
+    {
+       "title": "H U M A N I T Y",
+       "icon": "fa-hands-holding fa-float",
+       "definitions": [
+           "Give joy.", 
+           "People first.", 
+           "Assume the best."
+       ],
+       "quote": "Do unto others as they would have me do unto them."
+   },
+    {
+       "title": "C O N N E C T I O N",
+       "icon": "fa-circle-nodes fa-spin-snap-8",
+       "definitions": [
+           "Be interested in others.", 
+           "Meet people where they are.", 
+           "Service the relationship first."
+       ],
+       "quote": "They remember 8% of what I say, and 100% of how I make them feel."
+   },
+    {
+       "title": "C O M M U N I C A T I O N",
+       "icon": "fa-comment-dots fa-flip",
+       "definitions": [
+           "Listening is loving.", 
+           "Talk when the ear is ready.", 
+           "Disagree without being disagreeable."
+       ],
+       "quote": "Speak only if it improves upon the silence."
+   },
+    {
+       "title": "G I V I N G",
+       "icon": "fa-gift fa-bounce",
+       "definitions": [
+           "Make a difference.", 
+           "Seek how to serve.", 
+           "It is in giving that I receive."
+       ],
+       "quote": "Judge each day not by what I reap, but by what I sow."
+   },
+    {
+       "title": "S E R V I C E",
+       "icon": "fa-hand-sparkles fa-wag",
+       "definitions": [
+           "Get permission.", 
+           "Nothing is trivial.", 
+           "Frame the experience.", 
+           "Delight unexpectedly."
+       ],
+       "quote": "Give them what they won’t get anywhere else."
+   },
+    {
+       "title": "T E A M",
+       "icon": "fa-users fa-float",
+       "definitions": [
+           "Less me, more we.", 
+           "I rise by lifting others.", 
+           "Many hands make light work."
+       ],
+       "quote": "To go fast, I go alone. To go far, we go together."
+   },
+    {
+       "title": "W E L L N E S S",
+       "icon": "fa-spa fa-wag",
+       "definitions": [
+           "Love myself enough.", 
+           "Health is the first wealth.", 
+           "Prevention is the best medicine."
+       ],
+       "quote": "Inspect all things which enter my body, my mind, and my heart."
+   },
+    {
+       "title": "M I N D F U L N E S S",
+       "icon": "fa-brain fa-buzz",
+       "definitions": [
+           "Breathe.", 
+           "Name the feeling.", 
+           "Meet the moment.", 
+           "Cherish mistakes.", 
+           "This too will pass."
+       ],
+       "quote": "I improve the world around me when I improve the world within me."
+   }
+]

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Meet Our Hygienists | Integrative Dentistry Seattle</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f1833d9ed3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" disabled id="dyslexia-font">
+    
+    <script>
+        // Inline localStorage state enforcement engine to prevent flash of unstyled content
+        if (localStorage.getItem('dark-mode') === 'enabled') { document.body.classList.add('dark-theme'); }
+        if (localStorage.getItem('adhd-mode') === 'enabled') { document.documentElement.classList.add('adhd-mode'); }    
+        if (localStorage.getItem('large-cursor') === 'enabled') { document.documentElement.classList.add('large-cursor'); }
+        if (localStorage.getItem('dyslexia-font') === 'enabled') {
+            document.body.classList.add('dyslexia-enabled');
+            document.getElementById('dyslexia-font').removeAttribute('disabled');
+        }
+        if (localStorage.getItem('high-contrast') === 'enabled') { document.documentElement.classList.add('high-contrast'); }
+    </script>    
+</head>
+<body>
+
+    <div class="canvas-bg"></div>
+
+    <!-- Mobile Contact Hub -->
+<div class="floating-actions-container">
+    <div class="mobile-contact-hub">
+        <button class="contact-hub-trigger" aria-label="Open contact option panel" aria-expanded="false">
+            <i class="fa-solid fa-comments hub-icon-open"></i>
+            <i class="fa-solid fa-xmark hub-icon-close"></i>
+        </button>
+    <div class="contact-hub-menu">
+        <div class="hub-menu-title">Connect With Us</div>
+            <a href="tel:2063676453" class="hub-menu-item">
+                <div class="hub-item-icon color-call"><i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Call Our Office</span>
+                    <small>(206) 367-6453</small>
+                </div>
+            </a>
+            <a href="sms:2063676453?&body=Hello! My name is " class="hub-menu-item">
+                <div class="hub-item-icon color-text"><i class="fa-solid fa-comment-sms fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Text Us Directly</span>
+                    <small>Real-time coordinator link</small>
+                </div>
+            </a>
+            <a href="http://dental4.me/integrativedentistry" class="hub-menu-item">
+                <div class="hub-item-icon color-schedule"><i class="fa-duotone fa-solid fa-calendar-days fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Book Appointment</span>
+                    <small>Schedule your holistic visit</small>
+                </div>
+            </a>
+            <a href="#" onclick="downloadVCard(event)" class="hub-menu-item">
+                <div class="hub-item-icon color-contact"><i class="fa-solid fa-user-plus fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Save to Contacts</span>
+                    <small>Add our office to your phone</small>
+                </div>
+            </a>
+    </div>
+</div>
+        
+        
+<!-- Call Us Button -->
+<a href="tel:2063676453" class="action-bubble bubble-teal pos-call" data-tooltip="Call Us!" aria-label="Call Us">
+    <span class="bubble-icon">
+        <i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Text Us Button -->
+<a href="sms:2063676453?&body=Hello! My name is " class="action-bubble bubble-teal pos-text" data-tooltip="Text Us!" aria-label="Text Us">
+    <span class="bubble-icon">
+        <i class="fa-solid fa-comment-dots fa-flip fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Schedule Now Button -->
+<a href="http://dental4.me/integrativedentistry" class="action-bubble bubble-teal pos-schedule" data-tooltip="Schedule Now!" aria-label="Schedule Now">
+    <span class="bubble-icon">
+        <i class="fa-duotone fa-solid fa-calendar-days fa-float fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Flow IV Partner Button with Timed Speech Bubble -->
+<div class="flow-iv-wrapper pos-flow-iv">
+    <div id="flow-iv-speech" class="flow-iv-speech-bubble" role="status">
+        Now Partnered With <em>flow iv</em>!
+        <span class="speech-arrow"></span>
+    </div>
+    <a href="https://flowiv.org" target="_blank" rel="noopener noreferrer" class="action-bubble bubble-flow-iv" data-tooltip="Visit flow iv!" aria-label="Now Paired With flow iv">
+        <span class="bubble-icon flow-iv-icon-wrap">
+            <i class="fa-vellum fa-solid fa-droplet fa-2xl" style="--fa-primary-color: rgb(111, 157, 238); --fa-secondary-color: rgb(202, 216, 241); --fa-secondary-opacity: 1;"></i>
+        </span>
+    </a>
+</div>
+
+<!-- 3D Theme Switcher w/ Coin-flip Engine -->
+<button id="theme-btn" class="action-bubble theme-bubble-position pos-theme" data-tooltip="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
+    <div class="theme-coin">
+        <div class="coin-face face-front">
+                    <i class="fa-graphite fa-thin fa-moon fa-2xl"></i>
+        </div>
+        <div class="coin-face face-back">
+            <i class="fa-sharp fa-regular fa-sun-bright fa-2xl"></i>
+        </div>
+    </div>
+</button>
+
+<!-- Accessibility Button -->
+<button id="access-btn" class="action-bubble bubble-brown pos-accessibility" data-tooltip="Accessibility Options!" aria-label="Accessibility Options">
+    <span class="bubble-icon">
+        <i class="fa-notdog-duo fa-solid fa-universal-access fa-2xl"></i>
+    </span>
+</button>
+</div>
+
+<!-- Dropdown Panel Hooked to the Accessibility Module -->
+<div id="access-menu" class="hidden">
+    <h3>Accessibility Accommodations</h3>
+    <hr>
+        <button id="btn-adhd-mode" onclick="toggleAccessibility('adhd-mode')">ADHD Reading Mask</button>
+        <button id="btn-large-cursor" onclick="toggleAccessibility('large-cursor')">Large Cursor</button>
+        <button id="btn-dyslexia-font" onclick="toggleAccessibility('dyslexia-font')">Dyslexia Friendly Font</button>
+        <button id="btn-high-contrast" onclick="toggleAccessibility('high-contrast')">High Contrast Mode</button>
+</div>
+    
+    <header>
+    <div class="header-bg-canvas"></div>
+        <nav>
+        <div class="brand-container">
+            <div class="logo">
+            <a href="https://mitchmarderdds.com/" style="color: inherit; text-decoration: none;">
+                Integrative 
+                <img src="assets/Logo.png" alt="Integrative Dentistry Emblem" class="header-logo-img">
+                <span>Dentistry</span>
+            </a>
+            </div>
+                <p class="tagline">The Best in Modern Holistic Dentistry</p>
+        </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="doctors.html" class="nav-item">Meet The Doctors</a></li>
+                <li><a href="values.html" class="nav-item">Our Values</a></li>
+                <li><a href="about.html" class="nav-item">About Our Office</a></li>
+                <li><a href="services.html" class="nav-item">Our Services</a></li>
+                <li><a href="faq.html" class="nav-item">FAQ</a></li>
+                <li><a href="forms.html" class="nav-item">Patient Forms</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-line line-top"></span>
+                    <span class="hamburger-line line-middle"></span>
+                    <span class="hamburger-line line-bottom"></span>
+                </span>
+            </button>
+        </nav>
+</header>
+
+    <main>
+        <section class="team-section scroll-animate visible">
+            <div class="team-header">
+                <h2>Meet Our Holistic Hygienists</h2>
+                <span class="services-subtitle">Biological Experts Dedicated to True Wellness</span>
+                <p class="services-intro">Click on a provider to learn about their training, holistic philosophies, and clinical passions.</p>
+            </div>
+
+            <!-- Provider Selection Avatars Matrix -->
+            <div class="team-selection-grid">
+                <div class="provider-avatar-card active" data-team-target="morgan">
+                    <div class="avatar-image-frame">
+                        <img src="assets/MorganCircle.png" alt="Morgan Profile Portrait">
+                    </div>
+                    <h3>Morgan Slippy, RDH</h3><br>
+                    <span>Lead Hygienist</span>
+                </div>
+
+                <div class="provider-avatar-card" data-team-target="lydia">
+                    <div class="avatar-image-frame">
+                        <img src="assets/LydiaCircle.png" alt="Lydia Profile Portrait">
+                    </div>
+                    <h3>Lydia Sherbet, RDH</h3><br>
+                    <span>Hygienist</span>
+                </div>
+
+                <div class="provider-avatar-card" data-team-target="edith">
+                    <div class="avatar-image-frame">
+                        <img src="assets/EdithCircle.png" alt="Edith Profile Portrait">
+                    </div>
+                    <h3>Edith Serna, MS, RDH</h3><br>
+                    <span>Hygienist</span>
+                </div>
+
+            </div>
+
+            <!-- Focused Biological Bio Presentation Deck -->
+            <div class="team-display-canvas">
+                
+                <!-- Profile Block: Morgan -->
+                <div class="team-display-card active" id="team-morgan">
+                    <div class="bio-layout-split">
+                        <div class="bio-text-zone">
+                            <div class="card-badge">Holistic Hygiene</div>
+                            <h3>Morgan Slippy, RDH</h3>
+                            <p class="card-description"><br>Hi! I’m Morgan. I’m originally from Idaho and earned my Bachelor’s degree in Dental Hygiene from Pacific University. I moved to Seattle in 2022 to continue growing in my career while exploring everything the city has to offer.<br><br>
+                            As the quietest member of our hygiene team, I bring a calm and gentle presence to each appointment. I know that dental visits can feel overwhelming for some patients, so I focus on creating a comfortable, relaxed experience while providing thorough, high-quality care.<br><br>
+                            Outside the office, I enjoy soaking up sunshine, going to the gym, getting lost in a good book, and exploring Seattle’s happy hour and brunch spots. I’m also obsessed with my dog Oakley; he’s been by my side since I was 16, and I can’t resist sharing his pictures or stories whenever I get the chance.<br><br>
+                            I look forward to helping you feel confident in your smile and leaving with one on your face!</p>
+                            <ul class="card-features"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Block: Lydia -->
+                <div class="team-display-card" id="team-lydia">
+                    <div class="bio-layout-split">
+                        <div class="bio-text-zone">
+                            <div class="card-badge">Holistic Hygiene</div>
+                            <h3>Lydia Sherbet, RDH</h3>
+                            <p class="card-description"><br>Hi, I’m Lydia! I’m from Bellingham and received my Dental Hygiene certification at Bellingham Technical College in 2018. I now reside north of Seattle and enjoy exploring the local beaches, lakes, and mountains.<br><br>
+                            I am passionate about providing high quality care that is tailored to your needs while also building strong personal relationships. I love helping you feel happier and more confident about your smile!<br><br>
+                            In my free time I enjoy doing things like hiking, skiing, swimming, crafting, and spending time with my husband, family, friends, and my corgis.</p>
+                            <ul class="card-features"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Block: Edith -->
+                <div class="team-display-card" id="team-edith">
+                    <div class="bio-layout-split">
+                        <div class="bio-text-zone">
+                            <div class="card-badge">Holistic Hygiene</div>
+                            <h3>Edith Serna, MS, RDH</h3>
+                            <p class="card-description"><br>Hello, I'm Edith! I am a Yakima native and earned my bachelor's degree in biology from the University of Washington before completing dental hygiene school at Pima Medical Institute (the building right next door!). I later pursued my master's degree in microbiology and cell science because I truly love learning and understanding how the body works at a deeper level. <br><br>
+                            I am especially passionate about the connection between oral health and whole-body health. My goal is to empower patients with the knowledge they need to make informed decisions about their care, while always providing thorough and gentle treatment. I believe patients deserve to understand the why behind what we do, and I love helping translate the science into something practical and meaningful. <br><br>
+                            When I'm not in the office, I enjoy spending time with my parents, cooking and baking recipes from all over the world, painting, reading, exercising, and making my home a beautiful space to be.</p>
+                            <ul class="card-features"></ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="scroll-animate">
+        <div class="footer-grid">
+            <div class="contact-details">
+                <h2>Connect With Us</h2>
+                <p class="address-line">9730 3rd Avenue NE, Suite 205<br>Seattle, WA, 98115</p>
+                <div class="meta-links">
+                    <p><strong>Call or Text:</strong> <a href="tel:2063676453" data-tooltip="Opens your native calling app to call our office directly">206-367-6453</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@integrativedentistry.com" data-tooltip="Opens your native email app to send us a message">info@integrativedentistry.com</a></p>
+                </div>
+                <div class="hours-block">
+                    <h3>Office Hours</h3>
+                    <p>Monday – Thursday: 7:00 AM – 4:00 PM</p>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div class="fallback-map-ui">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.1939993959363!2d-122.32501500000001!3d47.700071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013ff6bbf59c9%3A0x12124b2e3f065d6d!2sIntegrative%20Dentistry!5e0!3m2!1sen!2sus!4v1781202363336!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/IntegrativeDentistrySeattle/" class="social-circle-btn facebook" target="_blank" rel="noopener" data-tooltip="Follow our Facebook community">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                </a>
+                <a href="#" class="social-circle-btn instagram" target="_blank" rel="noopener" data-tooltip="See updates on Instagram">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                </a>
+                <a href="#" class="social-circle-btn tiktok" target="_blank" rel="noopener" data-tooltip="Watch us on TikTok">
+                    <i class="fa-brands fa-tiktok fa-2xl"></i>
+                </a>
+                <a href="https://share.google/nsMCfHDNv0bOtifRO" class="social-circle-btn google" target="_blank" rel="noopener" data-tooltip="View our Google Business listing">
+                    <i class="fa-brands fa-google fa-2xl"></i>
+                </a>
+                <a href="https://www.yelp.com/biz/integrative-dentistry-seattle" class="social-circle-btn yelp" target="_blank" rel="noopener" data-tooltip="Read our reviews on Yelp">
+                    <i class="fa-brands fa-yelp fa-2xl"></i>
+                </a>
+            </div>
+        </div>
+</footer>
+
+    <div id="cursor-tooltip" class="cursor-tooltip"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

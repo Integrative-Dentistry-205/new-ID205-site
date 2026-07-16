@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Frequently Asked Questions | Integrative Dentistry Seattle</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f1833d9ed3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" disabled id="dyslexia-font">
+    
+    <script>
+        if (localStorage.getItem('dark-mode') === 'enabled') { document.body.classList.add('dark-theme'); }
+        if (localStorage.getItem('adhd-mode') === 'enabled') { document.documentElement.classList.add('adhd-mode'); }    
+        if (localStorage.getItem('large-cursor') === 'enabled') { document.documentElement.classList.add('large-cursor'); }
+        if (localStorage.getItem('dyslexia-font') === 'enabled') {
+            document.body.classList.add('dyslexia-enabled');
+            document.getElementById('dyslexia-font').removeAttribute('disabled');
+        }
+        if (localStorage.getItem('high-contrast') === 'enabled') { document.documentElement.classList.add('high-contrast'); }
+    </script>    
+</head>
+<body>
+
+    <div class="canvas-bg"></div>
+
+    <!-- Mobile Contact Hub -->
+<div class="floating-actions-container">
+    <div class="mobile-contact-hub">
+        <button class="contact-hub-trigger" aria-label="Open contact option panel" aria-expanded="false">
+            <i class="fa-solid fa-comments hub-icon-open"></i>
+            <i class="fa-solid fa-xmark hub-icon-close"></i>
+        </button>
+    <div class="contact-hub-menu">
+        <div class="hub-menu-title">Connect With Us</div>
+            <a href="tel:2063676453" class="hub-menu-item">
+                <div class="hub-item-icon color-call"><i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Call Our Office</span>
+                    <small>(206) 367-6453</small>
+                </div>
+            </a>
+            <a href="sms:2063676453?&body=Hello! My name is " class="hub-menu-item">
+                <div class="hub-item-icon color-text"><i class="fa-solid fa-comment-sms fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Text Us Directly</span>
+                    <small>Real-time coordinator link</small>
+                </div>
+            </a>
+            <a href="http://dental4.me/integrativedentistry" class="hub-menu-item">
+                <div class="hub-item-icon color-schedule"><i class="fa-duotone fa-solid fa-calendar-days fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Book Appointment</span>
+                    <small>Schedule your holistic visit</small>
+                </div>
+            </a>
+            <a href="#" onclick="downloadVCard(event)" class="hub-menu-item">
+                <div class="hub-item-icon color-contact"><i class="fa-solid fa-user-plus fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Save to Contacts</span>
+                    <small>Add our office to your phone</small>
+                </div>
+            </a>
+    </div>
+</div>
+        
+        
+<!-- Call Us Button -->
+<a href="tel:2063676453" class="action-bubble bubble-teal pos-call" data-tooltip="Call Us!" aria-label="Call Us">
+    <span class="bubble-icon">
+        <i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Text Us Button -->
+<a href="sms:2063676453?&body=Hello! My name is " class="action-bubble bubble-teal pos-text" data-tooltip="Text Us!" aria-label="Text Us">
+    <span class="bubble-icon">
+        <i class="fa-solid fa-comment-dots fa-flip fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Schedule Now Button -->
+<a href="http://dental4.me/integrativedentistry" class="action-bubble bubble-teal pos-schedule" data-tooltip="Schedule Now!" aria-label="Schedule Now">
+    <span class="bubble-icon">
+        <i class="fa-duotone fa-solid fa-calendar-days fa-float fa-2xl"></i>
+    </span>
+</a>
+
+<!-- Flow IV Partner Button with Timed Speech Bubble -->
+<div class="flow-iv-wrapper pos-flow-iv">
+    <div id="flow-iv-speech" class="flow-iv-speech-bubble" role="status">
+        Now Partnered With <em>flow iv</em>!
+        <span class="speech-arrow"></span>
+    </div>
+    <a href="https://flowiv.org" target="_blank" rel="noopener noreferrer" class="action-bubble bubble-flow-iv" data-tooltip="Visit flow iv!" aria-label="Now Paired With flow iv">
+        <span class="bubble-icon flow-iv-icon-wrap">
+            <i class="fa-vellum fa-solid fa-droplet fa-2xl" style="--fa-primary-color: rgb(111, 157, 238); --fa-secondary-color: rgb(202, 216, 241); --fa-secondary-opacity: 1;"></i>
+        </span>
+    </a>
+</div>
+
+<!-- 3D Theme Switcher w/ Coin-flip Engine -->
+<button id="theme-btn" class="action-bubble theme-bubble-position pos-theme" data-tooltip="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
+    <div class="theme-coin">
+        <div class="coin-face face-front">
+                    <i class="fa-graphite fa-thin fa-moon fa-2xl"></i>
+        </div>
+        <div class="coin-face face-back">
+            <i class="fa-sharp fa-regular fa-sun-bright fa-2xl"></i>
+        </div>
+    </div>
+</button>
+
+<!-- Accessibility Button -->
+<button id="access-btn" class="action-bubble bubble-brown pos-accessibility" data-tooltip="Accessibility Options!" aria-label="Accessibility Options">
+    <span class="bubble-icon">
+        <i class="fa-notdog-duo fa-solid fa-universal-access fa-2xl"></i>
+    </span>
+</button>
+</div>
+
+<!-- Dropdown Panel Hooked to the Accessibility Module -->
+<div id="access-menu" class="hidden">
+    <h3>Accessibility Accommodations</h3>
+    <hr>
+        <button id="btn-adhd-mode" onclick="toggleAccessibility('adhd-mode')">ADHD Reading Mask</button>
+        <button id="btn-large-cursor" onclick="toggleAccessibility('large-cursor')">Large Cursor</button>
+        <button id="btn-dyslexia-font" onclick="toggleAccessibility('dyslexia-font')">Dyslexia Friendly Font</button>
+        <button id="btn-high-contrast" onclick="toggleAccessibility('high-contrast')">High Contrast Mode</button>
+</div>
+    
+    <header>
+    <div class="header-bg-canvas"></div>
+        <nav>
+        <div class="brand-container">
+            <div class="logo">
+            <a href="https://mitchmarderdds.com/" style="color: inherit; text-decoration: none;">
+                Integrative 
+                <img src="assets/Logo.png" alt="Integrative Dentistry Emblem" class="header-logo-img">
+                <span>Dentistry</span>
+            </a>
+            </div>
+                <p class="tagline">The Best in Modern Holistic Dentistry</p>
+        </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li class="dropdown"><a href="#" class="nav-item">Meet Our Team</a><div class="dropdown-content"><a href="doctors.html">Meet The Doctors</a><a href="hygienists.html">Meet The Hygienists</a></div></li>
+                <li><a href="values.html" class="nav-item">Our Values</a></li>
+                <li><a href="about.html" class="nav-item">About Our Office</a></li>
+                <li><a href="services.html" class="nav-item">Our Services</a></li>
+                
+                <li><a href="forms.html" class="nav-item">Patient Forms</a></li>
+                <li><a href="contact.html" class="nav-item">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-line line-top"></span>
+                    <span class="hamburger-line line-middle"></span>
+                    <span class="hamburger-line line-bottom"></span>
+                </span>
+            </button>
+        </nav>
+</header>
+
+    <main>
+        <section class="faq-section scroll-animate visible">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <span class="services-subtitle">Demystifying Biological & Whole-Body Oral Care</span>
+                <p class="services-intro">Explore clarity on holistic protocols, biological restorations, and our health safety frameworks.</p>
+                <div class="faq-search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="faq-search-input" placeholder="Search questions or keywords...">
+                </div>
+            </div>
+
+            <!-- Category Filtering Stack -->
+            <div class="faq-filter-grid">
+                <button class="filter-pill active" data-faq-filter="all">All Questions</button>
+                <button class="filter-pill" data-faq-filter="general">General Holistic</button>
+                <button class="filter-pill" data-faq-filter="appt">Appointments</button>
+                <button class="filter-pill" data-faq-filter="cost">Costs and Insurance</button>
+                <button class="filter-pill" data-faq-filter="tx">Procedures and X-rays</button>
+                <button class="filter-pill" data-faq-filter="smart">SMART Mercury Safety</button>
+                <button class="filter-pill" data-faq-filter="materials">Biocompatibility</button>
+            </div>
+
+            <!-- Accordion Matrix Deck -->
+            <div class="faq-accordion-canvas">
+            <!-- GENERAL -->    
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="general">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">What makes holistic dentistry different from traditional dentistry?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>We evaluate your oral health as an inseparable reflection of your total systemic wellness. Rather than treating issues in isolation, we focus on identifying underlying root causes, avoiding toxic heavy metals, and using treatments that preserve your body's natural vitality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="general">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">I am looking to have a teeth cleaning that also features use of “air flow therapy/air slurry polishing”. Do you offer this service?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>We do! Please be sure to request it when scheduling your first cleaning with our office, and we can make sure you are scheduled appropriately!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="general">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">I think or I’ve been told I have periodontal gum disease. Is there anything I can do to treat this naturally at home?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Gum disease is a serious issue, and unfortunately even with the best at home care and hygiene regimen, it cannot be treated without a professional’s attention, as they have the tools to go under the gumline and clean out the bacteria that progresses the disease. Patients with periodontal disease should see their doctor and hygienist at least 3 to 4 times a year to maintain their oral health.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="general">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Does your office test saliva to determine what bacteria are in my mouth?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>We do! It’s called an Oral DNA test. If your oral biome is extremely active, and difficult to manage, we can send in a sample to determine what bacteria may be present and how to best manage it.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="general">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">How often should I change my toothbrush / toothbrush head?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>It is recommended that you change your toothbrush or electric toothbrush head every 3 months. Research shows that new toothbrushes remove more plaque than a worn out one. Over time, your brush also can become more prone to bacterial or fungal growth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="general">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">I was a patient in your office while living in/near Seattle, but have since moved away. Is there any holistic dentist you would recommend in my area?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>We are sad to see you go, but hope for the best on your new adventure in life. The best thing to find a new dentist in our area that likely shares the same holistic values as we do is to use the <a href="https://iaomt.org/for-patients/search/" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">Dentist Finder on IAOMT's website</a>. There you can see the nearest dentists that follow the same protocols our office does, and keep up with your oral care!</p>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- APPOINTMENTS --> 
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="appt">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Can I request appointments on your website, or do I need to call?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>You can schedule an appointment by <a href="https://dental4.me/integrativedentistry" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">clicking here</a>, selecting the appropriate appointment type and provider, and then select a time that works best for you. You can also click the schedule icon on the top left of your screen to go to the same page, or call/text us at 206-367-6453.
+                            </p>
+                            <br>
+                            <p>Many people prefer to schedule appointments online, since doing so lets you choose what works for you at your own leisure. Our scheduling platform is designed to be user-friendly and accessible at any time, and is a live, up-to-date look at our schedule's availability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="appt">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">When should I arrive for my first appointment?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>
+                                We recommend arriving 10-15 minutes before your scheduled appointment time. This allows us to ensure you have all the necessary information and paperwork completed before your visit. If you completed the paperwork online, arriving no more than 5 minutes early is sufficient. If you have any questions or need assistance, our front desk team will be happy to help you upon arrival.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="appt">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">What should I bring to my first appointment?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>If you have any insurance that you would like us to courtesy bill for your reimbursement, please bring your 
+                            <span class="js-image-tooltip-trigger" data-image-src="assets/sample-insurance-card.png">dental card</span> 
+                            with you. Also have handy any past x-rays or information that may help during your initial appointment if you have not sent it <a href="mailto:info@integrativedentistry.com" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">via email</a> already.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="appt">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">How long will my appointment be?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>
+                                Appointment lengths vary depending on the type of visit. A comprehensive exam typically takes about 1.5 hours, while a routine cleaning may take up to an hour. More complex procedures may require longer appointments, which will be discussed with you during your initial exam.</p><br><p>Our team will ensure that you have ample time for your visit and that all your questions are addressed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="appt">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Does your office treat children?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>
+                                Our office welcomes any patient 13 years and older. For our patients that are parents to children under the age of 13, to help keep your family's care in one place, we can generally see your child as well. However, <em>please note that we want every child to have a positive dental experience, each and every time they see the dentist.</em> If our office is unable to provide that for children of established families, we may recommend they see
+                                another local pediatric dentist that specializes in treating children.
+                            </p>
+                            <p><br><b>For children under the age of 13 of non-established families</b>, we recommend you seek care from a pediatric dentist. These offices generally offer a more welcoming experience for kids, helping ensure they have a positive relationship with dental care. We recommend <a href="https://www.kidzdentalhaven.com/" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">Kidz Dental Haven</a> and <a href="https://www.thelittlesmileloft.com/" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">The Little Smile Loft</a>, both located near our office, and will accommodate children of parents looking to avoid metals and fluoride, when asked.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="appt">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">What is your office's hours of operation?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>
+                                Our office is open Monday through Thursday from 7:00 AM to 4:00 PM. We are closed on Fridays, weekends, and major holidays.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- COSTS AND INSURANCE -->
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="cost">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">What are the costs associated with your services?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Costs for our services vary depending on the specific treatment needed. A comprehensive examanination, which is the first step before we can determine any treatment that is best suited for your dental needs, or a cleaning, is $315. This appointment is typically an hour and a half, and we can update any x-rays as needed, at no additional cost to you.<br><br>Cleanings start at $200 and go up from there based on your oral and periodontal health. Our hygiene team, in tandem with your doctor, will work to evaluate your specific needs and create your personalized hygiene regimen and an updated cost estimate. Patients with gingivitis or active periodontal disease may have higher costs associated with their treatment. Restorative and surgical treatments will have varying costs based on the complexity of the procedure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="cost">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">I was diagnosed with quite a bit of dental work by another office. I wanted to get a second opinion and see about holistic options. Could I get a quote from your office on what I need done?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Absolutely! You can send us a copy of your treatment plan to <a href="mailto:info@integrativedentistry.com" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">info@integrativedentistry.com</a>, or give us the codes they gave you over the phone and we can tell you the cost of the equivalent in our office. Please note: unless we see you for an exam first, <b>all quotes are only estimates for equivalent treatments</b>, as we have not evaluated you ourselves yet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="cost">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Does your office accept insurance?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Our office does accept insurance. We are out-of-network with all insurances, but we do bill insurances that accept claims from non-contracted dentists. We collect in full for all services performed on that day, and the insurance is asked to reimburse you back directly - which insurances tend to do when billed by an out-of-network provider.</p>
+                            <br><p>Please note: we bill/send claims to insurance companies <b>as a courtesy to our patients.</b> It is the patient's responsibility to follow up with their insurance, or resubmit any claims/additional information that they request. Our office will assist where we can, <b>if we are kindly requested to do so</b>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="cost">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Are you in-network with my insurance?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Since we are not contracted with any insurance, we would be out-of-network with all plans. This does change the structure of how they reimburse sometimes. For more information, we suggest calling your insurance directly to determine what your benefits would look like ahead of time.</p>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- PROCEDURES AND X-RAYS -->
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">I was recommended to have a root canal or an extraction. What services can you offer to help me save my tooth?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>We can definitely recommend time and supportive measures available within our toolkits to help prolong needing any of these procedures for a few weeks and re-evaluate your need for them afterwards. If there is any pain or swelling, that also factors into what can be done. The first step is an exam to evaluate what options are available to you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">I’m looking for a dentist or oral surgeon that can remove a root canal. Does your office provide this service? I have heard root canals are bad. I have a couple and am concerned. What do you do about them? Some of the dentists here say they do root canals with bioceramic materials. Is that good?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>If a root canal treated tooth becomes infected, or no longer viable, we can extract the tooth in our office. We do feel that most of the time, root canals are not the best option for some people. The alternative is to extract the tooth, and either place an implant or bridge.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Does your office perform extractions, implants, and implant crowns?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>We do! After an evaluation with one of our doctors, we can determine your candidacy for implants, and we can most of the time perform the whole process within our office. From the date of your extraction, there is typically about a 6 month healing time before the implant, and another 6 months until it has integrated fully so that you are ready for the crown. Time can vary per person, of course. We use zirconia implants in our office, which can be a great alternative to root canal therapy. Our crowns are also metal-free!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Does your office do crowns and bridges? What about CEREC, or same day crowns?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Our doctors do place crowns and bridges, and our office is CEREC ready as well. They are all ceramic, metal-free crowns. Check with your doctor to see what is a right fit for you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">I’m experiencing TMJ/TMD issues. My jaw pops, clicks, and/or moves to the side a bit when I open my mouth fully. Sometimes, I cannot open my mouth as far as would be considered “normal”. Do you see and treat people with these problems?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>We can evaluate the condition. As far as treatment for TMJ, we typically refer to <a href="https://www.tmjdisorders.com/" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">Dr. Jason Pehling, DDS, MS</a>, a TMD specialist.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">I have constant bad breath, but I brush my teeth regularly. What can I do to help this embarrassing problem?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>We highly recommend you make an appointment to come in to evaluate this with your doctor. Bad breath tends to be the symptom of an underlying problem and would require professional care. The source of the problem could only be determined by a doctor, and they will come up with the proper care to help alleviate the problem.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">What is your office policy on taking new x-rays? Do I have to do new x-rays on my first exam? Can I use x-rays taken from my previous office?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>In general, we don’t want to take x-rays when they are not necessary. We’d prefer to not subject patients to needless radiation. If you have x-rays from a previous dental office, you can request to have them sent to our email - <a href="mailto:info@integrativedentistry.com" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">info@integrativedentistry.com</a>. We actually prefer them! In the event that the x-rays are too old (typically older than 12 to 18 months), or the doctor needs to diagnose something that they can or can’t see, they may request we take new x-rays at your appointment.</p>
+                            <br>
+                            <p>To better understand our holistic diagnostic criteria and when x-rays are deemed necessary, you can review the ADA's <a href="forms.html?autoOpen=caries7" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">Caries Risk Assessment Framework</a>.</p>
+                            <br>
+                            <p>Take heart in that our x-ray machines are all digital, and that means a considerably less amount of radiation than older machines. In fact, there’s more radiation involved in your daily activities, such as eating, going outdoors, or even breathing, than a single x-ray in our office.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Do you use digital x-rays, and are they safe?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Yes, we use digital x-rays which are safer and more efficient than traditional film x-rays. They reduce radiation exposure by up to 90% and provide instant images for better diagnosis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="tx">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">As a holistic practice, why do you still take X-rays if the ADA recommends only doing them when necessary?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>
+                                We completely agree with the American Dental Association’s updated guidelines! The ADA confirms that X-rays should never be a "one-size-fits-all" routine, and they should only be ordered when clinically necessary. That aligns perfectly with our conservative approach to dentistry. We strictly follow the ALARA principle—As Low As Reasonably Achievable—meaning we limit your exposure to the absolute minimum required.</p>
+                                <br><p>So, when are they necessary for us? Because we view your oral health as fundamentally linked to your overall health, we cannot afford to guess about what is happening beneath the surface. Dental X-rays allow us to diagnose disease and damage that is simply not visible during a standard visual exam.</p>
+                                <br><p>Without imaging, hidden issues like asymptomatic chronic infections, jawbone changes, or deep decay could go undetected and silently burden your immune system. By using ultra-low radiation digital imaging only when clinically justified, we gather the essential diagnostic information needed to ensure your mouth is truly healthy and biocompatible with the rest of your body. We will always discuss the need for any images with you beforehand so we can make informed decisions about your care together.</p>
+                                <br><p>After your initial exam and x-rays, the frequency of future x-rays is determined by your provider using the ADA's <a href="forms.html?autoOpen=caries7" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">Caries Risk Assessment Framework</a>. Please note, <em>x-rays may be taken at lesser intervals if there are new signs of decay, infection, or other symptoms that lead your provider to needing updated imaging.</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- SMART MERCURY SAFETY -->
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="smart">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">What is your process of removing amalgam/mercury/silver fillings safely?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>All of our providers use the <a href="https://iaomt.org/resources/safe-removal-amalgam-fillings/" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">SMART protocol</a>. When your doctor first treatment plans your amalgam removal, they will recommend getting in contact with your naturopath to formulate a detoxification plan.</p>
+                            <br>
+                            <p>Our office also offers a few naturopathic IV therapy options administered by our own Dr. Jeannette Daneals, ND, that can be completed before or after your removal procedure.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="smart">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">What is the SMART protocol for removing amalgam fillings?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p><a href="https://iaomt.org/resources/safe-removal-amalgam-fillings/" style="color: var(--teal-base); font-weight: bold; text-decoration: underline;">The Safe Mercury Amalgam Removal Technique (SMART)</a> utilizes specialized risk reduction measures, such as an ionized air filtration system and dental dam, protective equipment such as respirators and eyewear, and environmental protections like an amalgam capture system. This protects you, the doctor and their assistant, and the environment from toxic elemental mercury vapors during the replacement of structural legacy silver fillings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="smart">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">(What) Do you charge for the SMART removal of amalgam fillings?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Our office does not charge, nor charge extra for the removal of amalgam fillings. The only cost would be for the replacement procedure, such as a composite filling or crown.</p>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- BIOCOMPATIBILITY -->    
+                <!-- FAQ Item -->
+                <div class="faq-wrapper-card" data-faq-category="materials">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span class="faq-question-text">Are all your composite restorations 100% BPA and fluoride free?</span>
+                        <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
+                    </button>
+                    <div class="faq-response-panel">
+                        <div class="faq-panel-content">
+                            <p>Yes. Every single custom restorative composite resin, ceramic crown, and bonding protocol used across our workflows is selected to be completely non-reactive, metal-free, BPA-free, and fluoride-free to ensure natural biocompatibility.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="scroll-animate">
+        <div class="footer-grid">
+            <div class="contact-details">
+                <h2>Connect With Us</h2>
+                <p class="address-line">9730 3rd Avenue NE, Suite 205<br>Seattle, WA, 98115</p>
+                <div class="meta-links">
+                    <p><strong>Call or Text:</strong> <a href="tel:2063676453" data-tooltip="Opens your native calling app to call our office directly">206-367-6453</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@integrativedentistry.com" data-tooltip="Opens your native email app to send us a message">info@integrativedentistry.com</a></p>
+                </div>
+                <div class="hours-block">
+                    <h3>Office Hours</h3>
+                    <p>Monday – Thursday: 7:00 AM – 4:00 PM</p>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div class="fallback-map-ui">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.1939993959363!2d-122.32501500000001!3d47.700071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013ff6bbf59c9%3A0x12124b2e3f065d6d!2sIntegrative%20Dentistry!5e0!3m2!1sen!2sus!4v1781202363336!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/IntegrativeDentistrySeattle/" class="social-circle-btn facebook" target="_blank" rel="noopener" data-tooltip="Follow our Facebook community">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                </a>
+                <a href="#" class="social-circle-btn instagram" target="_blank" rel="noopener" data-tooltip="See updates on Instagram">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                </a>
+                <a href="#" class="social-circle-btn tiktok" target="_blank" rel="noopener" data-tooltip="Watch us on TikTok">
+                    <i class="fa-brands fa-tiktok fa-2xl"></i>
+                </a>
+                <a href="https://share.google/nsMCfHDNv0bOtifRO" class="social-circle-btn google" target="_blank" rel="noopener" data-tooltip="View our Google Business listing">
+                    <i class="fa-brands fa-google fa-2xl"></i>
+                </a>
+                <a href="https://www.yelp.com/biz/integrative-dentistry-seattle" class="social-circle-btn yelp" target="_blank" rel="noopener" data-tooltip="Read our reviews on Yelp">
+                    <i class="fa-brands fa-yelp fa-2xl"></i>
+                </a>
+            </div>
+        </div>
+</footer>
+
+    <div id="cursor-tooltip" class="cursor-tooltip"></div>
+
+    <div id="image-hover-tooltip" class="image-hover-tooltip">
+        <img src="" alt="Reference Image" id="hover-tooltip-img">
+        <p class="image-tooltip-caption">Example only. Card designs will vary by provider.</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
