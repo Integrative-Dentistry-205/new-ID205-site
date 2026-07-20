@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +9,48 @@
     <link rel="icon" type="image/png" href="assets/Logo.png">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/f1833d9ed3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" disabled id="dyslexia-font">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        disabled id="dyslexia-font">
     <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "Dentist",
-    "name": "Integrative Dentistry",
-    "alternateName": "Integrative Dentistry Seattle",
-    "description": "The best in modern holistic dentistry. Offering biocompatible fillings, ozone therapy, and biological dental care in Seattle, Washington.",
-    "url": "https://www.mitchmarderdds.com",
-    "logo": "https://www.mitchmarderdds.com/assets/Logo.png",
-    "image": "https://www.mitchmarderdds.com/assets/Logo.png",
-    "telephone": "+1-206-367-6453",
-    "email": "info@integrativedentistry.com",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "9730 3rd Avenue NE, Suite 205",
-        "addressLocality": "Seattle",
-        "addressRegion": "WA",
-        "postalCode": "98115",
-        "addressCountry": "US"
-    },
-    "openingHoursSpecification": [
         {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday"
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Integrative Dentistry",
+        "alternateName": "Integrative Dentistry Seattle",
+        "description": "The best in modern holistic dentistry. Offering biocompatible fillings, ozone therapy, and biological dental care in Seattle, Washington.",
+        "url": "https://www.mitchmarderdds.com",
+        "logo": "https://www.mitchmarderdds.com/assets/Logo.png",
+        "image": "https://www.mitchmarderdds.com/assets/Logo.png",
+        "telephone": "+1-206-367-6453",
+        "email": "info@integrativedentistry.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9730 3rd Avenue NE, Suite 205",
+            "addressLocality": "Seattle",
+            "addressRegion": "WA",
+            "postalCode": "98115",
+            "addressCountry": "US"
+        },
+        "openingHoursSpecification": [
+            {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday"
+            ],
+            "opens": "07:00",
+            "closes": "16:00"
+            }
         ],
-        "opens": "07:00",
-        "closes": "16:00"
+        "sameAs": [
+            "https://www.facebook.com/IntegrativeDentistrySeattle/",
+            "https://www.yelp.com/biz/integrative-dentistry-seattle"
+        ]
         }
-    ],
-    "sameAs": [
-        "https://www.facebook.com/IntegrativeDentistrySeattle/",
-        "https://www.yelp.com/biz/integrative-dentistry-seattle"
-    ]
-    }
-    </script>
+        </script>
     <script>
         // Check local storage immediately before the page renders
         if (localStorage.getItem('dark-mode') === 'enabled') {
@@ -55,7 +58,7 @@
         }
         if (localStorage.getItem('adhd-mode') === 'enabled') {
             document.documentElement.classList.add('adhd-mode');
-        }    
+        }
         if (localStorage.getItem('large-cursor') === 'enabled') {
             document.documentElement.classList.add('large-cursor');
         }
@@ -66,136 +69,148 @@
         if (localStorage.getItem('high-contrast') === 'enabled') {
             document.documentElement.classList.add('high-contrast');
         }
-    </script>    
+    </script>
 </head>
+
 <body>
 
     <div class="canvas-bg"></div>
 
     <!-- Mobile Contact Hub -->
-<div class="floating-actions-container">
-    <div class="mobile-contact-hub">
-        <button class="contact-hub-trigger" aria-label="Open contact option panel" aria-expanded="false">
-            <i class="fa-solid fa-comments hub-icon-open"></i>
-            <i class="fa-solid fa-xmark hub-icon-close"></i>
-        </button>
-    <div class="contact-hub-menu">
-        <div class="hub-menu-title">Connect With Us</div>
-            <a href="tel:2063676453" class="hub-menu-item">
-                <div class="hub-item-icon color-call"><i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i></div>
-                <div class="hub-item-text">
-                    <span>Call Our Office</span>
-                    <small>(206) 367-6453</small>
-                </div>
-            </a>
-            <a href="sms:2063676453?&body=Hello! My name is " class="hub-menu-item">
-                <div class="hub-item-icon color-text"><i class="fa-solid fa-comment-sms fa-2xl"></i></div>
-                <div class="hub-item-text">
-                    <span>Text Us Directly</span>
-                    <small>Real-time coordinator link</small>
-                </div>
-            </a>
-            <a href="http://dental4.me/integrativedentistry" class="hub-menu-item">
-                <div class="hub-item-icon color-schedule"><i class="fa-duotone fa-solid fa-calendar-days fa-2xl"></i></div>
-                <div class="hub-item-text">
-                    <span>Book Appointment</span>
-                    <small>Schedule your holistic visit</small>
-                </div>
-            </a>
-            <a href="#" onclick="downloadVCard(event)" class="hub-menu-item">
-                <div class="hub-item-icon color-contact"><i class="fa-solid fa-user-plus fa-2xl"></i></div>
-                <div class="hub-item-text">
-                    <span>Save to Contacts</span>
-                    <small>Add our office to your phone</small>
-                </div>
-            </a>
-    </div>
-</div>
-        
-        
-<!-- Call Us Button -->
-<a href="tel:2063676453" class="action-bubble bubble-teal pos-call" data-tooltip="Call Us!" aria-label="Call Us">
-    <span class="bubble-icon">
-        <i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i>
-    </span>
-</a>
+    <div class="floating-actions-container">
+        <div class="mobile-contact-hub">
+            <button class="contact-hub-trigger" aria-label="Open contact option panel" aria-expanded="false">
+                <i class="fa-solid fa-comments hub-icon-open"></i>
+                <i class="fa-solid fa-xmark hub-icon-close"></i>
+            </button>
+            <div class="contact-hub-menu">
+                <div class="hub-menu-title">Connect With Us</div>
+                <a href="tel:2063676453" class="hub-menu-item">
+                    <div class="hub-item-icon color-call"><i
+                            class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i></div>
+                    <div class="hub-item-text">
+                        <span>Call Our Office</span>
+                        <small>(206) 367-6453</small>
+                    </div>
+                </a>
+                <a href="sms:2063676453?&body=Hello! My name is " class="hub-menu-item">
+                    <div class="hub-item-icon color-text"><i class="fa-solid fa-comment-sms fa-2xl"></i></div>
+                    <div class="hub-item-text">
+                        <span>Text Us Directly</span>
+                        <small>Real-time coordinator link</small>
+                    </div>
+                </a>
+                <a href="http://dental4.me/integrativedentistry" class="hub-menu-item">
+                    <div class="hub-item-icon color-schedule"><i
+                            class="fa-duotone fa-solid fa-calendar-days fa-2xl"></i></div>
+                    <div class="hub-item-text">
+                        <span>Book Appointment</span>
+                        <small>Schedule your holistic visit</small>
+                    </div>
+                </a>
+                <a href="#" onclick="downloadVCard(event)" class="hub-menu-item">
+                    <div class="hub-item-icon color-contact"><i class="fa-solid fa-user-plus fa-2xl"></i></div>
+                    <div class="hub-item-text">
+                        <span>Save to Contacts</span>
+                        <small>Add our office to your phone</small>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-<!-- Text Us Button -->
-<a href="sms:2063676453?&body=Hello! My name is " class="action-bubble bubble-teal pos-text" data-tooltip="Text Us!" aria-label="Text Us">
-    <span class="bubble-icon">
-        <i class="fa-solid fa-comment-dots fa-flip fa-2xl"></i>
-    </span>
-</a>
+        <!-- Call Us Button -->
+        <a href="tel:2063676453" class="action-bubble bubble-teal pos-call" data-tooltip="Call Us!"
+            aria-label="Call Us">
+            <span class="bubble-icon">
+                <i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i>
+            </span>
+        </a>
 
-<!-- Schedule Now Button -->
-<a href="http://dental4.me/integrativedentistry" class="action-bubble bubble-teal pos-schedule" data-tooltip="Schedule Now!" aria-label="Schedule Now">
-    <span class="bubble-icon">
-        <i class="fa-duotone fa-solid fa-calendar-days fa-float fa-2xl"></i>
-    </span>
-</a>
+        <!-- Text Us Button -->
+        <a href="sms:2063676453?&body=Hello! My name is " class="action-bubble bubble-teal pos-text"
+            data-tooltip="Text Us!" aria-label="Text Us">
+            <span class="bubble-icon">
+                <i class="fa-solid fa-comment-dots fa-flip fa-2xl"></i>
+            </span>
+        </a>
 
-<!-- Flow IV Partner Button with Timed Speech Bubble -->
-<div class="flow-iv-wrapper pos-flow-iv">
-    <div id="flow-iv-speech" class="flow-iv-speech-bubble" role="status">
-        Now Partnered With <em>flow iv</em>!
-        <span class="speech-arrow"></span>
-    </div>
-    <a href="https://flowiv.org" target="_blank" rel="noopener noreferrer" class="action-bubble bubble-flow-iv" data-tooltip="Visit flow iv!" aria-label="Now Paired With flow iv">
-        <span class="bubble-icon flow-iv-icon-wrap">
-            <i class="fa-vellum fa-solid fa-droplet fa-2xl" style="--fa-primary-color: rgb(111, 157, 238); --fa-secondary-color: rgb(202, 216, 241); --fa-secondary-opacity: 1;"></i>
-        </span>
-    </a>
-</div>
+        <!-- Schedule Now Button -->
+        <a href="http://dental4.me/integrativedentistry" class="action-bubble bubble-teal pos-schedule"
+            data-tooltip="Schedule Now!" aria-label="Schedule Now">
+            <span class="bubble-icon">
+                <i class="fa-duotone fa-solid fa-calendar-days fa-float fa-2xl"></i>
+            </span>
+        </a>
 
-<!-- 3D Theme Switcher w/ Coin-flip Engine -->
-<button id="theme-btn" class="action-bubble theme-bubble-position pos-theme" data-tooltip="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
-    <div class="theme-coin">
-        <div class="coin-face face-front">
+        <!-- Flow IV Partner Button with Timed Speech Bubble -->
+        <div class="flow-iv-wrapper pos-flow-iv">
+            <div id="flow-iv-speech" class="flow-iv-speech-bubble" role="status">
+                Now Partnered With <em>flow iv</em>!
+                <span class="speech-arrow"></span>
+            </div>
+            <a href="https://flowiv.org" target="_blank" rel="noopener noreferrer" class="action-bubble bubble-flow-iv"
+                data-tooltip="Visit flow iv!" aria-label="Now Paired With flow iv">
+                <span class="bubble-icon flow-iv-icon-wrap">
+                    <i class="fa-vellum fa-solid fa-droplet fa-2xl"
+                        style="--fa-primary-color: rgb(111, 157, 238); --fa-secondary-color: rgb(202, 216, 241); --fa-secondary-opacity: 1;"></i>
+                </span>
+            </a>
+        </div>
+
+        <!-- 3D Theme Switcher w/ Coin-flip Engine -->
+        <button id="theme-btn" class="action-bubble theme-bubble-position pos-theme"
+            data-tooltip="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
+            <div class="theme-coin">
+                <div class="coin-face face-front">
                     <i class="fa-graphite fa-thin fa-moon fa-2xl"></i>
-        </div>
-        <div class="coin-face face-back">
-            <i class="fa-sharp fa-regular fa-sun-bright fa-2xl"></i>
-        </div>
+                </div>
+                <div class="coin-face face-back">
+                    <i class="fa-sharp fa-regular fa-sun-bright fa-2xl"></i>
+                </div>
+            </div>
+        </button>
+
+        <!-- Accessibility Button -->
+        <button id="access-btn" class="action-bubble bubble-brown pos-accessibility"
+            data-tooltip="Accessibility Options!" aria-label="Accessibility Options">
+            <span class="bubble-icon">
+                <i class="fa-notdog-duo fa-solid fa-universal-access fa-2xl"></i>
+            </span>
+        </button>
     </div>
-</button>
 
-<!-- Accessibility Button -->
-<button id="access-btn" class="action-bubble bubble-brown pos-accessibility" data-tooltip="Accessibility Options!" aria-label="Accessibility Options">
-    <span class="bubble-icon">
-        <i class="fa-notdog-duo fa-solid fa-universal-access fa-2xl"></i>
-    </span>
-</button>
-</div>
-
-<!-- Dropdown Panel Hooked to the Accessibility Module -->
-<div id="access-menu" class="hidden">
-    <h3>Accessibility Accommodations</h3>
-    <hr>
+    <!-- Dropdown Panel Hooked to the Accessibility Module -->
+    <div id="access-menu" class="hidden">
+        <h3>Accessibility Accommodations</h3>
+        <hr>
         <button id="btn-adhd-mode" onclick="toggleAccessibility('adhd-mode')">ADHD Reading Mask</button>
         <button id="btn-large-cursor" onclick="toggleAccessibility('large-cursor')">Large Cursor</button>
         <button id="btn-dyslexia-font" onclick="toggleAccessibility('dyslexia-font')">Dyslexia Friendly Font</button>
         <button id="btn-high-contrast" onclick="toggleAccessibility('high-contrast')">High Contrast Mode</button>
-</div>
-    
+    </div>
+
     <header>
-    <div class="header-bg-canvas"></div>
+        <div class="header-bg-canvas"></div>
         <nav>
-        <div class="brand-container">
-            <div class="logo">
-            <a href="https://mitchmarderdds.com/" style="color: inherit; text-decoration: none;">
-                Integrative 
-                <img src="assets/Logo.png" alt="Integrative Dentistry Emblem" class="header-logo-img">
-                <span>Dentistry</span>
-            </a>
-            </div>
+            <div class="brand-container">
+                <div class="logo">
+                    <a href="https://mitchmarderdds.com/" style="color: inherit; text-decoration: none;">
+                        Integrative
+                        <img src="assets/Logo.png" alt="Integrative Dentistry Emblem" class="header-logo-img">
+                        <span>Dentistry</span>
+                    </a>
+                </div>
                 <p class="tagline">The Best in Modern Holistic Dentistry</p>
-        </div>
-            
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-item">Home</a></li>
-                <li class="dropdown"><a href="#" class="nav-item">Meet Our Team</a><div class="dropdown-content"><a href="doctors.html">Meet The Doctors</a><a href="hygienists.html">Meet The Hygienists</a></div></li>
+                <li class="dropdown"><a href="#" class="nav-item">Meet Our Team</a>
+                    <div class="dropdown-content"><a href="doctors.html">Meet The Doctors</a><a
+                            href="hygienists.html">Meet The Hygienists</a></div>
+                </li>
                 <li><a href="values.html" class="nav-item">Our Values</a></li>
-                
+                <li><a href="about.html" class="nav-item active">About Our Office</a></li>
                 <li><a href="services.html" class="nav-item">Our Services</a></li>
                 <li><a href="faq.html" class="nav-item">FAQ</a></li>
                 <li><a href="forms.html" class="nav-item">Patient Forms</a></li>
@@ -209,222 +224,276 @@
                 </span>
             </button>
         </nav>
-</header>
+    </header>
 
     <main>
-    
+
         <section id="about-office" class="services-section scroll-animate">
-    <div class="services-header">
-        <h2>About Our Office</h2>
-        <span class="services-subtitle">Demystifying Holistic Care</span>
-        <p class="services-intro">Discover the philosophy, technology, and transparency that makes our holistic practice unique.</p>
-    </div>
-
-    <!-- The Interactive Split Container -->
-    <div class="services-split-container">
-        
-        <!-- Left Nav Stack -->
-        <div class="services-nav-stack">
-            <!-- Item 1 -->
-            <div class="service-nav-item active" data-service-target="biological">
-                <div class="service-nav-icon">
-                    <i class="fa-solid fa-seedling"></i>
-                </div>
-                <div class="service-nav-text">
-                    <h3>Biological Dentistry</h3>
-                    <p>A holistic approach to your smile and health.</p>
-                </div>
-                <i class="fa-solid fa-chevron-right service-arrow"></i>
+            <div class="services-header">
+                <h2>About Our Office</h2>
+                <span class="services-subtitle">Demystifying Holistic Care</span>
+                <p class="services-intro">Discover the philosophy, technology, and transparency that makes our holistic
+                    practice unique.</p>
             </div>
 
-            <!-- Item 2 -->
-            <div class="service-nav-item" data-service-target="technology">
-                <div class="service-nav-icon">
-                    <i class="fa-solid fa-microchip"></i>
-                </div>
-                <div class="service-nav-text">
-                    <h3>Our Office & Tech</h3>
-                    <p>A soothing, ultra-clean biocompatible space.</p>
-                </div>
-                <i class="fa-solid fa-chevron-right service-arrow"></i>
-            </div>
+            <!-- The Interactive Split Container -->
+            <div class="services-split-container">
 
-            <!-- Item 3 -->
-            <div class="service-nav-item" data-service-target="demystifying">
-                <div class="service-nav-icon">
-                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-                </div>
-                <div class="service-nav-text">
-                    <h3>Demystifying Care</h3>
-                    <p>Pulling back the curtain on our methods.</p>
-                </div>
-                <i class="fa-solid fa-chevron-right service-arrow"></i>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="service-nav-item" data-service-target="difference">
-                <div class="service-nav-icon">
-                    <i class="fa-solid fa-leaf"></i>
-                </div>
-                <div class="service-nav-text">
-                    <h3>The Difference</h3>
-                    <p>Root-cause diagnostics and patient-centric visits.</p>
-                </div>
-                <i class="fa-solid fa-chevron-right service-arrow"></i>
-            </div>
-        </div>
-
-        <!-- Right Side: Vellum Canvas Display Cards -->
-        <div class="services-display-canvas">
-            
-            <!-- Card 1: Biological Dentistry -->
-            <div class="service-display-card active" id="service-biological">
-                <div class="card-badge">Whole-Body Wellness</div>
-                <h3>Biological Dentistry</h3>
-                <div class="content-scroll-area">
-                    <p class="card-description">At Integrative Dentistry, we believe your oral health is deeply connected to your total well-being. By blending advanced modern dentistry with natural, biological principles, we treat the mouth and body as one interconnected system. Our goal is to help you make safe, informed decisions that support your entire body, spirit, and smile.</p>
-            
-                    <p class="card-description">For over 30 years, our Seattle practice has been at the forefront of biological dentistry. We partner with a network of like-minded healthcare professionals to ensure biocompatibility, provide nutritional support, and guide systemic detoxification.</p>
-            
-                    <p class="card-description">We perform dentistry in harmony with your body’s natural systems. Through advanced compatibility testing, we identify individual sensitivities to avoid any adverse reactions. We have proudly been a mercury-free and fluoride-free practice since 1987.</p>
-            
-                    <p class="card-description">Because our foundation is built on whole-body wellness, our care extends far beyond conventional treatments. We look at the bigger picture, evaluating how your dental health intersects with your airway, sleep quality, TMJ function, posture, and cranial balance.</p>
-            
-                    <a href="#contact" class="card-action-btn" style="margin-top: 15px;">Schedule Your Consultation <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- Card 2: Office & Technology -->
-            <div class="service-display-card" id="service-technology">
-                <div class="card-badge">Advanced Care</div>
-                <h3>Our Office & Technology</h3>
-                <div class="content-scroll-area">
-                    <p class="card-description">We’ve created a soothing, ultra-clean space designed specifically with our chemically and environmentally sensitive (MCS) patients in mind. By utilizing advanced air and water filtration, strictly low-VOC materials, and a practice-wide fragrance-free policy, we ensure a safe, reaction-free experience for everyone who walks through our doors.</p>
-            
-                    <ul class="card-features tech-features">
-                        <li>
-                            <i class="fa-solid fa-check"></i> 
-                            <div class="tech-item-text">
-                                <strong>CEREC® Same-Day Crowns</strong> 
-                                <span>Advanced CAD technology to design and mill bio-compatible custom crowns in a single visit.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i> 
-                            <div class="tech-item-text">
-                                <strong>3D Galileos Cone Beam</strong> 
-                                <span>Comprehensive assessment of teeth, jaws, sinuses, and airway.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i> 
-                            <div class="tech-item-text">
-                                <strong>Digital Diagnostics</strong> 
-                                <span>Low-radiation digital x-rays eliminate toxic developing chemicals.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i> 
-                            <div class="tech-item-text">
-                                <strong>Ozone Therapy</strong> 
-                                <span>Medical ozone naturally eliminates bacteria and supports healing.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-check"></i> 
-                            <div class="tech-item-text">
-                                <strong>Targeted Laser Therapies</strong> 
-                                <span>Minimally invasive laser gum treatments and infrared cellular healing.</span>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <a href="#contact" class="card-action-btn">View Technology <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- Card 3: Demystifying Care (Video Grid) -->
-            <div class="service-display-card" id="service-demystifying">
-                <div class="card-badge">Transparency</div>
-                <h3>Demystifying Care</h3>
-                <div class="content-scroll-area">
-                    <p class="card-description">Anxiety often stems from the unknown. We believe in complete transparency, taking the time to educate you on the "why" and "how" of every protocol. For those who want a deeper understanding of our holistic methods, we have pulled back the curtain. Explore the videos below to see what goes on during our most common biological procedures.</p>
-                    <p class="card-description by-line" style="font-size: 0.9em;"><em>(Informational videos produced by Paul Rubin, DDS, MIAOMT)</em></p>
-            
-                    <div class="demystify-video-grid">
-                        <div class="video-item">
-                            <span class="video-label">What is a Filling?</span>
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/Xt9jTlXmYn8?si=KNdLSTCJQZ69pgG4" title="What is a Filling?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
+                <!-- Left Nav Stack -->
+                <div class="services-nav-stack">
+                    <!-- Item 1 -->
+                    <div class="service-nav-item active" data-service-target="biological">
+                        <div class="service-nav-icon">
+                            <i class="fa-solid fa-seedling"></i>
                         </div>
-                
-                        <div class="video-item">
-                            <span class="video-label">What is a Crown?</span>
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/iCKatJpgysU?si=Tp4aoc1cHSzbig3R" title="What is a Crown?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
+                        <div class="service-nav-text">
+                            <h3>Biological Dentistry</h3>
+                            <p>A holistic approach to your smile and health.</p>
                         </div>
-                
-                        <div class="video-item">
-                            <span class="video-label">What is an Onlay?</span>
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/4WLBzCegS1I?si=KR630y_CUEnLiW9S" title="What is an Onlay?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
-                        </div>
+                        <i class="fa-solid fa-chevron-right service-arrow"></i>
+                    </div>
 
-                        <div class="video-item">
-                            <span class="video-label">What is a Bridge?</span>
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/NS6pyl3zxwI?si=47HM9_7Di0j9Vdgz" title="What is a Bridge?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
+                    <!-- Item 2 -->
+                    <div class="service-nav-item" data-service-target="technology">
+                        <div class="service-nav-icon">
+                            <i class="fa-solid fa-microchip"></i>
                         </div>
-
-                        <div class="video-item">
-                            <span class="video-label">What is an Implant?</span>
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/oH_af5sf3kA?si=FDWUg6l5gP9b3GOO" title="What is an Implant?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
+                        <div class="service-nav-text">
+                            <h3>Our Office & Tech</h3>
+                            <p>A soothing, ultra-clean biocompatible space.</p>
                         </div>
+                        <i class="fa-solid fa-chevron-right service-arrow"></i>
+                    </div>
 
-                        <div class="video-item">
-                            <span class="video-label">What is a Root Canal?</span>
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/4xAppq2pm34?si=TXHeJHIPzEEIQnbw" title="What is a Root Canal?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
+                    <!-- Item 3 -->
+                    <div class="service-nav-item" data-service-target="demystifying">
+                        <div class="service-nav-icon">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
                         </div>
+                        <div class="service-nav-text">
+                            <h3>Demystifying Care</h3>
+                            <p>Pulling back the curtain on our methods.</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right service-arrow"></i>
+                    </div>
 
-                        <div class="video-item">
-                            <span class="video-label">What is a Night Guard?</span>
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/S2DOTC8ck4o?si=LU-TUsXdQCkMZFNp" title="What is a Night Guard?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
+                    <!-- Item 4 -->
+                    <div class="service-nav-item" data-service-target="difference">
+                        <div class="service-nav-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <div class="service-nav-text">
+                            <h3>The Difference</h3>
+                            <p>Root-cause diagnostics and patient-centric visits.</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right service-arrow"></i>
+                    </div>
+                </div>
+
+                <!-- Right Side: Vellum Canvas Display Cards -->
+                <div class="services-display-canvas">
+
+                    <!-- Card 1: Biological Dentistry -->
+                    <div class="service-display-card active" id="service-biological">
+                        <div class="card-badge">Whole-Body Wellness</div>
+                        <h3>Biological Dentistry</h3>
+                        <div class="content-scroll-area">
+                            <p class="card-description">At Integrative Dentistry, we believe your oral health is deeply
+                                connected to your total well-being. By blending advanced modern dentistry with natural,
+                                biological principles, we treat the mouth and body as one interconnected system. Our
+                                goal is to help you make safe, informed decisions that support your entire body, spirit,
+                                and smile.</p>
+
+                            <p class="card-description">For over 30 years, our Seattle practice has been at the
+                                forefront of biological dentistry. We partner with a network of like-minded healthcare
+                                professionals to ensure biocompatibility, provide nutritional support, and guide
+                                systemic detoxification.</p>
+
+                            <p class="card-description">We perform dentistry in harmony with your body’s natural
+                                systems. Through advanced compatibility testing, we identify individual sensitivities to
+                                avoid any adverse reactions. We have proudly been a mercury-free and fluoride-free
+                                practice since 1987.</p>
+
+                            <p class="card-description">Because our foundation is built on whole-body wellness, our care
+                                extends far beyond conventional treatments. We look at the bigger picture, evaluating
+                                how your dental health intersects with your airway, sleep quality, TMJ function,
+                                posture, and cranial balance.</p>
+
+                            <a href="#contact" class="card-action-btn" style="margin-top: 15px;">Schedule Your
+                                Consultation <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
 
-                    <a href="http://dental4.me/integrativedentistry" class="card-action-btn" style="margin-top: 25px;">Schedule Your Consultation <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
+                    <!-- Card 2: Office & Technology -->
+                    <div class="service-display-card" id="service-technology">
+                        <div class="card-badge">Advanced Care</div>
+                        <h3>Our Office & Technology</h3>
+                        <div class="content-scroll-area">
+                            <p class="card-description">We’ve created a soothing, ultra-clean space designed
+                                specifically with our chemically and environmentally sensitive (MCS) patients in mind.
+                                By utilizing advanced air and water filtration, strictly low-VOC materials, and a
+                                practice-wide fragrance-free policy, we ensure a safe, reaction-free experience for
+                                everyone who walks through our doors.</p>
 
-            <!-- Card 4: The Difference -->
-            <div class="service-display-card" id="service-difference">
-                <div class="card-badge">Patient-Centric</div>
-                <h3>The Difference</h3>
-                <div class="content-scroll-area">
-                    <p class="card-description">We are not a standard drill-and-fill clinic. Our environment is designed to be a calm, restorative sanctuary. We look beyond symptoms to find root causes, offering a genuinely personalized, naturopathic approach to your family's smiles.</p>
-                    
-                    <ul class="card-features">
-                        <li><i class="fa-solid fa-check"></i> Spa-like, Relaxing Environment</li>
-                        <li><i class="fa-solid fa-check"></i> Root-Cause Diagnostics</li>
-                        <li><i class="fa-solid fa-check"></i> Unrushed, Patient-Centric Visits</li>
-                    </ul>
-                    <a href="#contact" class="card-action-btn">Experience The Difference <i class="fa-solid fa-arrow-right"></i></a>
+                            <ul class="card-features tech-features">
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="tech-item-text">
+                                        <strong>CEREC® Same-Day Crowns</strong>
+                                        <span>Advanced CAD technology to design and mill bio-compatible custom crowns in
+                                            a single visit.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="tech-item-text">
+                                        <strong>3D Galileos Cone Beam</strong>
+                                        <span>Comprehensive assessment of teeth, jaws, sinuses, and airway.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="tech-item-text">
+                                        <strong>Digital Diagnostics</strong>
+                                        <span>Low-radiation digital x-rays eliminate toxic developing chemicals.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="tech-item-text">
+                                        <strong>Ozone Therapy</strong>
+                                        <span>Medical ozone naturally eliminates bacteria and supports healing.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    <div class="tech-item-text">
+                                        <strong>Targeted Laser Therapies</strong>
+                                        <span>Minimally invasive laser gum treatments and infrared cellular
+                                            healing.</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a href="#contact" class="card-action-btn">View Technology <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Demystifying Care (Video Grid) -->
+                    <div class="service-display-card" id="service-demystifying">
+                        <div class="card-badge">Transparency</div>
+                        <h3>Demystifying Care</h3>
+                        <div class="content-scroll-area">
+                            <p class="card-description">Anxiety often stems from the unknown. We believe in complete
+                                transparency, taking the time to educate you on the "why" and "how" of every protocol.
+                                For those who want a deeper understanding of our holistic methods, we have pulled back
+                                the curtain. Explore the videos below to see what goes on during our most common
+                                biological procedures.</p>
+                            <p class="card-description by-line" style="font-size: 0.9em;"><em>(Informational videos
+                                    produced by Paul Rubin, DDS, MIAOMT)</em></p>
+
+                            <div class="demystify-video-grid">
+                                <div class="video-item">
+                                    <span class="video-label">What is a Filling?</span>
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/Xt9jTlXmYn8?si=KNdLSTCJQZ69pgG4"
+                                            title="What is a Filling?" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen loading="lazy"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <span class="video-label">What is a Crown?</span>
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/iCKatJpgysU?si=Tp4aoc1cHSzbig3R"
+                                            title="What is a Crown?" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen loading="lazy"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <span class="video-label">What is an Onlay?</span>
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/4WLBzCegS1I?si=KR630y_CUEnLiW9S"
+                                            title="What is an Onlay?" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen loading="lazy"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <span class="video-label">What is a Bridge?</span>
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/NS6pyl3zxwI?si=47HM9_7Di0j9Vdgz"
+                                            title="What is a Bridge?" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen loading="lazy"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <span class="video-label">What is an Implant?</span>
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/oH_af5sf3kA?si=FDWUg6l5gP9b3GOO"
+                                            title="What is an Implant?" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen loading="lazy"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <span class="video-label">What is a Root Canal?</span>
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/4xAppq2pm34?si=TXHeJHIPzEEIQnbw"
+                                            title="What is a Root Canal?" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen loading="lazy"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <span class="video-label">What is a Night Guard?</span>
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/S2DOTC8ck4o?si=LU-TUsXdQCkMZFNp"
+                                            title="What is a Night Guard?" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen loading="lazy"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="http://dental4.me/integrativedentistry" class="card-action-btn"
+                                style="margin-top: 25px;">Schedule Your Consultation <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: The Difference -->
+                    <div class="service-display-card" id="service-difference">
+                        <div class="card-badge">Patient-Centric</div>
+                        <h3>The Difference</h3>
+                        <div class="content-scroll-area">
+                            <p class="card-description">We are not a standard drill-and-fill clinic. Our environment is
+                                designed to be a calm, restorative sanctuary. We look beyond symptoms to find root
+                                causes, offering a genuinely personalized, naturopathic approach to your family's
+                                smiles.</p>
+
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-check"></i> Spa-like, Relaxing Environment</li>
+                                <li><i class="fa-solid fa-check"></i> Root-Cause Diagnostics</li>
+                                <li><i class="fa-solid fa-check"></i> Unrushed, Patient-Centric Visits</li>
+                            </ul>
+                            <a href="#contact" class="card-action-btn">Experience The Difference <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            
-        </div>
-    </div>
-</section>
+        </section>
 
     </main>
 
@@ -434,8 +503,12 @@
                 <h2>Connect With Us</h2>
                 <p class="address-line">9730 3rd Avenue NE, Suite 205<br>Seattle, WA, 98115</p>
                 <div class="meta-links">
-                    <p><strong>Call or Text:</strong> <a href="tel:2063676453" data-tooltip="Opens your native calling app to call our office directly">206-367-6453</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:info@integrativedentistry.com" data-tooltip="Opens your native email app to send us a message">info@integrativedentistry.com</a></p>
+                    <p><strong>Call or Text:</strong> <a href="tel:2063676453"
+                            data-tooltip="Opens your native calling app to call our office directly">206-367-6453</a>
+                    </p>
+                    <p><strong>Email:</strong> <a href="mailto:info@integrativedentistry.com"
+                            data-tooltip="Opens your native email app to send us a message">info@integrativedentistry.com</a>
+                    </p>
                 </div>
                 <div class="hours-block">
                     <h3>Office Hours</h3>
@@ -444,32 +517,41 @@
             </div>
             <div class="map-wrapper">
                 <div class="fallback-map-ui">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.1939993959363!2d-122.32501500000001!3d47.700071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013ff6bbf59c9%3A0x12124b2e3f065d6d!2sIntegrative%20Dentistry!5e0!3m2!1sen!2sus!4v1781202363336!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.1939993959363!2d-122.32501500000001!3d47.700071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013ff6bbf59c9%3A0x12124b2e3f065d6d!2sIntegrative%20Dentistry!5e0!3m2!1sen!2sus!4v1781202363336!5m2!1sen!2sus"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div class="social-links-container">
-                <a href="https://www.facebook.com/IntegrativeDentistrySeattle/" class="social-circle-btn facebook" target="_blank" rel="noopener" data-tooltip="Follow our Facebook community">
+                <a href="https://www.facebook.com/IntegrativeDentistrySeattle/" class="social-circle-btn facebook"
+                    target="_blank" rel="noopener" data-tooltip="Follow our Facebook community">
                     <i class="fa-brands fa-facebook fa-2xl"></i>
                 </a>
-                <a href="#" class="social-circle-btn instagram" target="_blank" rel="noopener" data-tooltip="See updates on Instagram">
+                <a href="#" class="social-circle-btn instagram" target="_blank" rel="noopener"
+                    data-tooltip="See updates on Instagram">
                     <i class="fa-brands fa-instagram fa-2xl"></i>
                 </a>
-                <a href="#" class="social-circle-btn tiktok" target="_blank" rel="noopener" data-tooltip="Watch us on TikTok">
+                <a href="#" class="social-circle-btn tiktok" target="_blank" rel="noopener"
+                    data-tooltip="Watch us on TikTok">
                     <i class="fa-brands fa-tiktok fa-2xl"></i>
                 </a>
-                <a href="https://share.google/nsMCfHDNv0bOtifRO" class="social-circle-btn google" target="_blank" rel="noopener" data-tooltip="View our Google Business listing">
+                <a href="https://share.google/nsMCfHDNv0bOtifRO" class="social-circle-btn google" target="_blank"
+                    rel="noopener" data-tooltip="View our Google Business listing">
                     <i class="fa-brands fa-google fa-2xl"></i>
                 </a>
-                <a href="https://www.yelp.com/biz/integrative-dentistry-seattle" class="social-circle-btn yelp" target="_blank" rel="noopener" data-tooltip="Read our reviews on Yelp">
+                <a href="https://www.yelp.com/biz/integrative-dentistry-seattle" class="social-circle-btn yelp"
+                    target="_blank" rel="noopener" data-tooltip="Read our reviews on Yelp">
                     <i class="fa-brands fa-yelp fa-2xl"></i>
                 </a>
             </div>
         </div>
-</footer>
+    </footer>
 
     <div id="cursor-tooltip" class="cursor-tooltip"></div>
-    
+
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
