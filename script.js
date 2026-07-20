@@ -2,7 +2,7 @@
 // GLOBAL FUNCTIONS (Accessible by inline HTML onclick/onload attributes)
 // ==========================================================================
 
-window.downloadVCard = function(event) {
+window.downloadVCard = function (event) {
     // Prevent the anchor link from jumping to the top of the page
     event.preventDefault();
 
@@ -32,7 +32,7 @@ END:VCARD`;
     // Append to DOM, click to download, and cleanup
     document.body.appendChild(a);
     a.click();
-    
+
     // Slight delay for iOS compatibility before revoking the URL
     setTimeout(() => {
         window.URL.revokeObjectURL(url);
@@ -41,19 +41,19 @@ END:VCARD`;
 };
 
 // Start or Pause Font Awesome Icons
-window.initializeIconPauses = function() {
+window.initializeIconPauses = function () {
     const animatedIcons = document.querySelectorAll('.fa-bounce, .fa-spin, .fa-pulse, .fa-beat, .fa-fade, .fa-beat-fade, .fa-bounce, .fa-flip, .fa-flip-360, .fa-shake, .fa-spin-pulse, .fa-spin-snap, .fa-spin-snap-4, .fa-spin-snap-8, .fa-spin, .fa-spin-reverse, .fa-float, .fa-wag, .fa-buzz, .fa-swing, .fa-jello');
 
     animatedIcons.forEach(icon => {
-        if (icon.dataset.pauseInitialized) return; 
-        
-        icon.dataset.pauseInitialized = "true"; 
+        if (icon.dataset.pauseInitialized) return;
+
+        icon.dataset.pauseInitialized = "true";
 
         icon.addEventListener('animationiteration', () => {
             icon.style.animationPlayState = 'paused';
             setTimeout(() => {
                 icon.style.animationPlayState = 'running';
-            }, 3000); 
+            }, 3000);
         });
     });
 };
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'adhd-mode': { class: 'adhd-mode', element: document.documentElement, btnId: 'btn-adhd-mode' },
         'dyslexia-font': { class: 'dyslexia-enabled', element: document.body, btnId: 'btn-dyslexia-font' },
         'large-cursor': { class: 'large-cursor', element: document.documentElement, btnId: 'btn-large-cursor' },
-        'dark-mode': { class: 'dark-theme', element: document.body, btnId: 'theme-btn' }, 
+        'dark-mode': { class: 'dark-theme', element: document.body, btnId: 'theme-btn' },
         'high-contrast': { class: 'high-contrast', element: document.documentElement, btnId: 'btn-high-contrast' }
     };
 
@@ -82,19 +82,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (localStorage.getItem(key) === 'enabled') {
             const { class: className, element, btnId } = settings[key];
             element.classList.add(className);
-            
+
             const btn = document.getElementById(btnId);
             if (btn) btn.classList.add('active');
         }
     });
 
     // Toggle Function (Bound to Window for dynamic button bindings)
-    window.toggleAccessibility = function(key) {
+    window.toggleAccessibility = function (key) {
         const { class: className, element, btnId } = settings[key];
         const isActive = element.classList.toggle(className);
-        
+
         localStorage.setItem(key, isActive ? 'enabled' : 'disabled');
-        
+
         const btn = document.getElementById(btnId);
         if (btn) btn.classList.toggle('active', isActive);
     };
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // 3. FLUID SCROLL, HEADER, & REVEAL OBSERVERS
     // ==========================================================================
-    
+
     // Header Shrink Scroll Tracker
     const mainHeader = document.querySelector('header');
     if (mainHeader) {
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 mainHeader.classList.remove('scrolled');
             }
-        }, { passive: true }); 
+        }, { passive: true });
     }
 
     // Smooth-Scroll Reveal Engine
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // 4. NAVIGATION, DRAWERS, & MENUS
     // ==========================================================================
-    
+
     // Isomorphic Mobile Menu Logic
     const mobileToggle = document.querySelector('.mobile-nav-toggle');
     const navLinks = document.querySelectorAll('.nav-links a.nav-item');
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle) {
         const toggleMenu = (e) => {
             e.stopPropagation();
-            e.preventDefault(); 
+            e.preventDefault();
             const isMenuOpen = document.body.getAttribute('data-nav-open') === 'true';
             document.body.setAttribute('data-nav-open', !isMenuOpen);
             mobileToggle.setAttribute('aria-expanded', !isMenuOpen);
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hubTrigger) {
         const toggleHub = (e) => {
             e.stopPropagation();
-            e.preventDefault(); 
+            e.preventDefault();
             const isOpen = document.body.getAttribute('data-contact-open') === 'true';
             document.body.setAttribute('data-contact-open', !isOpen);
             hubTrigger.setAttribute('aria-expanded', !isOpen);
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hover Tooltip Tracker Matrix (Text Bounds)
     const tooltipCanvas = document.getElementById('cursor-tooltip');
-    const pointerOffset = { x: 15, y: 15 }; 
+    const pointerOffset = { x: 15, y: 15 };
 
     if (tooltipCanvas) {
         document.querySelectorAll('[data-tooltip]').forEach(targetElement => {
@@ -298,10 +298,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             target.addEventListener('mousemove', (e) => {
                 const tooltipWidth = imageTooltipCanvas.offsetWidth;
-                const tooltipHeight = imageTooltipCanvas.offsetHeight || 180; 
+                const tooltipHeight = imageTooltipCanvas.offsetHeight || 180;
 
-                let targetX = e.clientX + 20; 
-                let targetY = e.clientY - tooltipHeight - 20; 
+                let targetX = e.clientX + 20;
+                let targetY = e.clientY - tooltipHeight - 20;
 
                 if (targetX + tooltipWidth > window.innerWidth) {
                     targetX = e.clientX - tooltipWidth - 20;
@@ -331,10 +331,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const centerY = rect.top + rect.height / 2;
             const mouseX = e.clientX - centerX;
             const mouseY = e.clientY - centerY;
-            
+
             const pushX = -(mouseX * 0.35);
             const pushY = -(mouseY * 0.35);
-            
+
             icon.style.transform = `translate(${pushX}px, ${pushY}px) scale(2.5)`;
         });
 
@@ -348,12 +348,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const speechBubble = document.getElementById('flow-iv-speech');
         if (speechBubble) {
             speechBubble.classList.add('show');
-            
+
             setTimeout(() => {
                 speechBubble.classList.remove('show');
             }, 30000); // 30 second dismiss
         }
-    }, 5000); 
+    }, 5000);
 
     // Phone Number Auto-Formatter
     const phoneInput = document.getElementById('intake-phone');
@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
         phoneInput.addEventListener('input', function (e) {
             let cleaned = e.target.value.replace(/\D/g, '');
             cleaned = cleaned.substring(0, 10);
-            
+
             let formatted = '';
             if (cleaned.length > 0) {
                 formatted = '(' + cleaned.substring(0, 3);
@@ -452,9 +452,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!(matchesCategory && matchesSearch) && card.classList.contains('open')) {
                     card.classList.remove('open');
                     const panel = card.querySelector('.faq-response-panel');
-                    if(panel) panel.style.maxHeight = null;
+                    if (panel) panel.style.maxHeight = null;
                     const trigger = card.querySelector('.faq-trigger');
-                    if(trigger) trigger.setAttribute('aria-expanded', 'false');
+                    if (trigger) trigger.setAttribute('aria-expanded', 'false');
                 }
 
                 if (matchesCategory && matchesSearch) {
@@ -578,8 +578,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Guided Biofilm Therapy",
             icon: '<i class="fa-solid fa-wind"></i>',
             intro: "Cleanings for Sensitive Teeth! Guided Biofilm Therapy (GBT) is a systematic, predictable solution for dental biofilm management using state-of-the-art AIRFLOW technologies. Air, heated water and low-abrasive powder combine to break down and flush away biofilm.",
-            videoId: "G_lspojuA0U", 
-            images: [ 
+            videoId: "G_lspojuA0U",
+            images: [
                 { src: "assets/gbt-before.png", label: "Before" },
                 { src: "assets/gbt-disclosure.png", label: "Disclosed" },
                 { src: "assets/gbt-after.png", label: "After AIRFLOW®" }
@@ -598,11 +598,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const targetKey = card.getAttribute('data-drawer-target');
                 const data = serviceData[targetKey];
 
-                if(data) {
+                if (data) {
                     drawerTitle.textContent = data.title;
                     drawerIcon.innerHTML = data.icon;
                     drawerIntro.textContent = data.intro;
-                    
+
                     drawerList.innerHTML = '';
                     data.services.forEach(item => {
                         const li = document.createElement('li');
@@ -616,9 +616,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         mediaContainer.id = 'drawer-media';
                         drawerIntro.insertAdjacentElement('afterend', mediaContainer);
                     }
-                    
-                    mediaContainer.innerHTML = ''; 
-                    
+
+                    mediaContainer.innerHTML = '';
+
                     if (data.images && data.images.length > 0) {
                         let galleryHTML = '<div class="drawer-image-gallery">';
                         data.images.forEach(img => {
@@ -632,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         galleryHTML += '</div>';
                         mediaContainer.innerHTML += galleryHTML;
                     }
-                    
+
                     if (data.videoId) {
                         mediaContainer.innerHTML += `
                             <div class="video-wrapper">
@@ -650,11 +650,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeDrawer = () => {
             drawer.classList.remove('open');
             overlay.classList.remove('open');
-            document.body.style.overflow = ''; 
-            
+            document.body.style.overflow = '';
+
             const iframes = drawer.querySelectorAll('iframe');
             iframes.forEach(iframe => {
-                iframe.src = iframe.src; 
+                iframe.src = iframe.src;
             });
         };
 
@@ -692,7 +692,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         lbCloseBtn.addEventListener('click', closeLightbox);
-        
+
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 closeLightbox();
@@ -720,8 +720,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pdfIframe.src = pdfSrc;
             pdfTitle.textContent = title;
             pdfDownloadBtn.href = pdfSrc;
-            if(pdfFallbackLink) pdfFallbackLink.href = pdfSrc;
-            
+            if (pdfFallbackLink) pdfFallbackLink.href = pdfSrc;
+
             pdfOverlay.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         };
@@ -729,10 +729,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const closePdfViewer = () => {
             pdfOverlay.classList.add('hidden');
             document.body.style.overflow = '';
-            
+
             setTimeout(() => {
                 pdfIframe.src = '';
-            }, 400); 
+            }, 400);
         };
 
         formCards.forEach(card => {
@@ -746,7 +746,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (pdfCloseBtn) pdfCloseBtn.addEventListener('click', closePdfViewer);
-        
+
         pdfOverlay.addEventListener('click', (e) => {
             if (e.target === pdfOverlay) {
                 closePdfViewer();
@@ -762,10 +762,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Auto-Open Logic via URL parameter
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('autoOpen') === 'caries7') {
-            const targetCard = Array.from(formCards).find(card => 
+            const targetCard = Array.from(formCards).find(card =>
                 card.getAttribute('data-title').includes('Age 7+')
             );
-            
+
             if (targetCard) {
                 setTimeout(() => {
                     targetCard.click();
@@ -775,27 +775,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
-    // 8. ASYNC FETCH & RENDERING (Reviews Marquee & Values)
+    // 8. ASYNC FETCH & RENDERING (Reviews Cross-Fade & Values)
     // ==========================================================================
 
-    // Fetch Reviews & Start Marquee
-    const track = document.getElementById('reviews-track');
-    
-    if (track) {
+    // Fetch Reviews & Start Fading Carousel
+    const reviewsContainer = document.getElementById('reviews-container');
+    const prevBtn = document.getElementById('review-prev-btn');
+    const nextBtn = document.getElementById('review-next-btn');
+
+    if (reviewsContainer) {
         fetch('reviews.json')
             .then(response => response.json())
             .then(reviewsData => {
-                reviewsData.forEach(review => {
+                let currentIndex = 0;
+                let reviewTimer;
+                const cards = [];
+
+                // Inject the reviews into the DOM
+                reviewsData.forEach((review, index) => {
                     const card = document.createElement('div');
                     card.className = 'review-card';
-                    card.innerHTML = `
-                        <div class="review-stars"></div>
-                        <p class="review-text-content">${review.text}</p>
-                        <b>${review.author}</b>
-                    `;
+                    if (index === 0) card.classList.add('active');
 
-                    const starContainer = card.querySelector('.review-stars');
-                    const ratingNumber = parseInt(review.stars); 
+                    const starContainer = document.createElement('div');
+                    starContainer.className = 'review-stars';
+                    const ratingNumber = parseInt(review.stars);
 
                     for (let i = 0; i < 5; i++) {
                         const starSpan = document.createElement('span');
@@ -806,39 +810,97 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         starContainer.appendChild(starSpan);
                     }
-                    track.appendChild(card);
+
+                    const textP = document.createElement('p');
+                    textP.className = 'review-text-content';
+                    textP.textContent = `"${review.text}"`;
+
+                    const authorDiv = document.createElement('div');
+                    authorDiv.className = 'reviewer';
+                    authorDiv.textContent = `- ${review.author}`;
+
+                    card.appendChild(starContainer);
+                    card.appendChild(textP);
+                    card.appendChild(authorDiv);
+
+                    reviewsContainer.appendChild(card);
+                    cards.push(card);
                 });
 
-                const originalCards = Array.from(track.children);
-                originalCards.forEach(card => {
-                    const clone = card.cloneNode(true);
-                    track.appendChild(clone);
-                });
+                // Function to transition between reviews
+                const showReview = (newIndex, direction = 'next') => {
+                    if (cards.length === 0 || currentIndex === newIndex) return;
 
-                startMarqueeAnimation(track);
+                    const currentCard = cards[currentIndex];
+
+                    // Clear all transitional classes from current
+                    currentCard.classList.remove('active', 'slide-in-left', 'slide-out-left', 'slide-out-right');
+
+                    // Animate out based on direction
+                    if (direction === 'next') {
+                        currentCard.classList.add('slide-out-left');
+                    } else {
+                        currentCard.classList.add('slide-out-right');
+                    }
+
+                    // Update index and get the new card
+                    currentIndex = newIndex;
+                    const nextCard = cards[currentIndex];
+
+                    // Reset its state
+                    nextCard.classList.remove('active', 'slide-in-left', 'slide-out-left', 'slide-out-right');
+
+                    // Animate in based on direction
+                    if (direction === 'next') {
+                        // Default position is slightly to the right, so just make active
+                        setTimeout(() => nextCard.classList.add('active'), 50);
+                    } else {
+                        // Position to the left first, then make active
+                        nextCard.classList.add('slide-in-left');
+                        setTimeout(() => {
+                            nextCard.classList.remove('slide-in-left');
+                            nextCard.classList.add('active');
+                        }, 50);
+                    }
+                };
+
+                const nextReview = () => {
+                    const nextIdx = (currentIndex + 1) % cards.length;
+                    showReview(nextIdx, 'next');
+                };
+
+                const prevReview = () => {
+                    const prevIdx = (currentIndex - 1 + cards.length) % cards.length;
+                    showReview(prevIdx, 'prev');
+                };
+
+                // Start automatic 15-second rotation
+                const startTimer = () => {
+                    reviewTimer = setInterval(nextReview, 10000);
+                };
+
+                // Initialize the timer
+                startTimer();
+
+                // Stop the timer and move manually when buttons are clicked
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        clearInterval(reviewTimer);
+                        prevReview();
+                    });
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        clearInterval(reviewTimer);
+                        nextReview();
+                    });
+                }
             })
             .catch(error => {
                 console.error("Could not load the reviews ledger:", error);
-                track.innerHTML = "<p style='color:var(--text-muted); padding:20px;'>Check back soon for patient reviews.</p>";
+                reviewsContainer.innerHTML = "<p style='color:var(--text-muted); padding:20px;'>Check back soon for patient reviews.</p>";
             });
-    }
-
-    function startMarqueeAnimation(trackElement) {
-        let currentXOffset = 0;
-        const scrollSpeed = 0.6; 
-
-        function marqueeLoop() {
-            if (!document.body.classList.contains('no-animations')) {
-                currentXOffset -= scrollSpeed;
-                const maxResetWidth = trackElement.scrollWidth / 2;
-                if (Math.abs(currentXOffset) >= maxResetWidth) {
-                    currentXOffset = 0;
-                }
-                trackElement.style.transform = `translateX(${currentXOffset}px)`;
-            }
-            requestAnimationFrame(marqueeLoop);
-        }
-        marqueeLoop();
     }
 
     // Values Slideshow Fetch and Scroll Tracker
@@ -861,7 +923,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const alignmentClass = index % 2 === 0 ? 'icon-right' : 'icon-left';
                     slide.className = `value-slide ${alignmentClass}`;
                     slide.id = `value-slide-${index}`;
-                    
+
                     if (index === 0) slide.classList.add('active');
 
                     const titleColor = earthyColors[index % earthyColors.length];
@@ -883,7 +945,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     presentationZone.appendChild(slide);
                     const snapTarget = document.createElement('div');
                     snapTarget.className = 'mobile-scroll-snap-point';
-                    snapTarget.style.top = `${index * 100}vh`; 
+                    snapTarget.style.top = `${index * 100}vh`;
                     scrollTrack.appendChild(snapTarget);
                 });
 
@@ -896,7 +958,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const trackBounds = scrollTrack.getBoundingClientRect();
                     const totalScrollTrackLength = scrollTrack.offsetHeight - window.innerHeight;
                     const activeScrolledDepth = -trackBounds.top;
-                    
+
                     let progress = Math.max(0, Math.min(1, activeScrolledDepth / totalScrollTrackLength));
                     const segmentLength = 1 / totalSlides;
                     const activeIndex = Math.min(totalSlides - 1, Math.floor(progress / segmentLength));
