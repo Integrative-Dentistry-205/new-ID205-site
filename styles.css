@@ -4900,6 +4900,7 @@ html.high-contrast body.dark-theme .flow-iv-icon-wrap i {
     -webkit-appearance: none;
     width: 22px;
     height: 22px;
+    flex-shrink: 0;
     padding: 0;
     margin: 0;
     border: 2px solid rgba(30, 107, 123, 0.3);
