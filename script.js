@@ -250,72 +250,78 @@ document.addEventListener('DOMContentLoaded', () => {
     const tooltipCanvas = document.getElementById('cursor-tooltip');
     const pointerOffset = { x: 15, y: 15 };
 
-    if (tooltipCanvas) {
+    if (window.matchMedia('(hover: hover)').matches) {
         document.querySelectorAll('[data-tooltip]').forEach(targetElement => {
             targetElement.addEventListener('mouseenter', (event) => {
-                const blurbText = event.currentTarget.getAttribute('data-tooltip');
-                if (blurbText) {
-                    tooltipCanvas.textContent = blurbText;
-                    tooltipCanvas.classList.add('visible');
-                }
-            });
+                if (tooltipCanvas) {
+                    document.querySelectorAll('[data-tooltip]').forEach(targetElement => {
+                        targetElement.addEventListener('mouseenter', (event) => {
+                            const blurbText = event.currentTarget.getAttribute('data-tooltip');
+                            if (blurbText) {
+                                tooltipCanvas.textContent = blurbText;
+                                tooltipCanvas.classList.add('visible');
+                            }
+                        });
 
-            targetElement.addEventListener('mousemove', (event) => {
-                const tooltipWidth = tooltipCanvas.offsetWidth;
-                const tooltipHeight = tooltipCanvas.offsetHeight;
-                let targetX = event.clientX + pointerOffset.x;
-                let targetY = event.clientY + pointerOffset.y;
+                        targetElement.addEventListener('mousemove', (event) => {
+                            const tooltipWidth = tooltipCanvas.offsetWidth;
+                            const tooltipHeight = tooltipCanvas.offsetHeight;
+                            let targetX = event.clientX + pointerOffset.x;
+                            let targetY = event.clientY + pointerOffset.y;
 
-                if (targetX + tooltipWidth > window.innerWidth) {
-                    targetX = event.clientX - tooltipWidth - pointerOffset.x;
-                }
-                if (targetY + tooltipHeight > window.innerHeight) {
-                    targetY = event.clientY - tooltipHeight - pointerOffset.y;
-                }
-                tooltipCanvas.style.left = `${targetX}px`;
-                tooltipCanvas.style.top = `${targetY}px`;
-            });
+                            if (targetX + tooltipWidth > window.innerWidth) {
+                                targetX = event.clientX - tooltipWidth - pointerOffset.x;
+                            }
+                            if (targetY + tooltipHeight > window.innerHeight) {
+                                targetY = event.clientY - tooltipHeight - pointerOffset.y;
+                            }
+                            tooltipCanvas.style.left = `${targetX}px`;
+                            tooltipCanvas.style.top = `${targetY}px`;
+                        });
 
-            targetElement.addEventListener('mouseleave', () => {
-                tooltipCanvas.classList.remove('visible');
-            });
-        });
-    }
-
-    // Dynamic Floating Image Tooltip Engine
-    const imageTooltipCanvas = document.getElementById('image-hover-tooltip');
-    const imageTooltipImg = document.getElementById('hover-tooltip-img');
-
-    if (imageTooltipCanvas && imageTooltipImg) {
-        document.querySelectorAll('.js-image-tooltip-trigger').forEach(target => {
-            target.addEventListener('mouseenter', (e) => {
-                const imgSrc = e.currentTarget.getAttribute('data-image-src');
-                if (imgSrc) {
-                    imageTooltipImg.src = imgSrc;
-                    imageTooltipCanvas.classList.add('visible');
-                }
-            });
-
-            target.addEventListener('mousemove', (e) => {
-                const tooltipWidth = imageTooltipCanvas.offsetWidth;
-                const tooltipHeight = imageTooltipCanvas.offsetHeight || 180;
-
-                let targetX = e.clientX + 20;
-                let targetY = e.clientY - tooltipHeight - 20;
-
-                if (targetX + tooltipWidth > window.innerWidth) {
-                    targetX = e.clientX - tooltipWidth - 20;
-                }
-                if (targetY < 0) {
-                    targetY = e.clientY + 20;
+                        targetElement.addEventListener('mouseleave', () => {
+                            tooltipCanvas.classList.remove('visible');
+                        });
+                    });
                 }
 
-                imageTooltipCanvas.style.left = `${targetX}px`;
-                imageTooltipCanvas.style.top = `${targetY}px`;
-            });
+                // Dynamic Floating Image Tooltip Engine
+                const imageTooltipCanvas = document.getElementById('image-hover-tooltip');
+                const imageTooltipImg = document.getElementById('hover-tooltip-img');
 
-            target.addEventListener('mouseleave', () => {
-                imageTooltipCanvas.classList.remove('visible');
+                if (imageTooltipCanvas && imageTooltipImg) {
+                    document.querySelectorAll('.js-image-tooltip-trigger').forEach(target => {
+                        target.addEventListener('mouseenter', (e) => {
+                            const imgSrc = e.currentTarget.getAttribute('data-image-src');
+                            if (imgSrc) {
+                                imageTooltipImg.src = imgSrc;
+                                imageTooltipCanvas.classList.add('visible');
+                            }
+                        });
+
+                        target.addEventListener('mousemove', (e) => {
+                            const tooltipWidth = imageTooltipCanvas.offsetWidth;
+                            const tooltipHeight = imageTooltipCanvas.offsetHeight || 180;
+
+                            let targetX = e.clientX + 20;
+                            let targetY = e.clientY - tooltipHeight - 20;
+
+                            if (targetX + tooltipWidth > window.innerWidth) {
+                                targetX = e.clientX - tooltipWidth - 20;
+                            }
+                            if (targetY < 0) {
+                                targetY = e.clientY + 20;
+                            }
+
+                            imageTooltipCanvas.style.left = `${targetX}px`;
+                            imageTooltipCanvas.style.top = `${targetY}px`;
+                        });
+
+                        target.addEventListener('mouseleave', () => {
+                            imageTooltipCanvas.classList.remove('visible');
+                        });
+                    });
+                }
             });
         });
     }
@@ -467,6 +473,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         filterPills.forEach(pill => {
             pill.addEventListener('click', () => {
+                const grid = pill.closest('.faq-filter-grid');
+
+                if (window.innerWidth <= 1024) {
+                    if (!grid.classList.contains('dropdown-open') && pill.classList.contains('active')) {
+                        grid.classList.add('dropdown-open');
+                    } else {
+                        grid.classList.remove('dropdown-open');
+                    }
+                }
+
                 if (pill.classList.contains('active')) return;
                 filterPills.forEach(item => item.classList.remove('active'));
                 pill.classList.add('active');
